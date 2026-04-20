@@ -22,6 +22,9 @@
   .strategy-item{margin:8px 0;text-indent:0;padding-left:8px}
   .strategy-num{color:var(--clr-head);font-weight:700;margin-right:4px}
   .footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--clr-border);font-size:12px;color:var(--clr-mute);text-align:center}
+  .chart-wrap{margin:18px -8px;text-align:center}
+  .chart-wrap img{max-width:100%;height:auto;border:1px solid var(--clr-border);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+  .chart-caption{font-size:12px;color:var(--clr-mute);font-style:italic;margin-top:6px;text-indent:0}
   .mode-toggle{position:sticky;top:12px;text-align:right;margin-bottom:-20px;z-index:10}
   .mode-toggle button{font-size:13px;padding:6px 14px;border:1px solid var(--clr-border);background:#fff;border-radius:20px;cursor:pointer;margin-left:6px}
   .mode-toggle button.active{background:var(--clr-data);color:#fff;border-color:var(--clr-data)}
@@ -49,6 +52,10 @@
 
     <h2>利率债</h2>
     <p><span class="alert">活跃券续强、中债估值曲线持平微升、结构分化显著</span>——活跃券：<span class="data">10Y国债-0.55BP至1.7545%、30Y-0.50BP至2.2530%、10Y国开-0.85BP至1.8585%</span>；中债估值：国债曲线基本持平（10Y+0.04BP至1.7627%、30Y+0.56BP至2.2556%），<span class="data">国开曲线明显牛平（10Y-1Y压缩0.85BP至43.33BP、短端+0.5BP）</span>；<span class="head">10Y隐含税率（中债估值口径）仅7.47BP</span>已极薄，<span class="alert">交易盘抢活跃券、配置盘按兵不动，长端赔率降低</span>。</p>
+    <div class="chart-wrap">
+      <img src="assets/20260420_chart2_active_vs_cdb.png" alt="活跃券vs中债估值">
+      <p class="chart-caption">图2：利率债结构分化——活跃券 vs 中债估值（2026-04-20 BP变动）</p>
+    </div>
 
     <h2>信用债（核心）</h2>
     <p>中债估值口径下，信用债<span class="data">全品种利差小幅压缩0.5-1.5BP</span>，宽松资金面正在外溢至信用端。<span class="head">核心信号：</span><span class="alert">中短票AAA 1Y报1.5351%（-0.67BP），恰刷2025年以来最低点、距低点0.00BP</span>，近一年分位数仅0.4%；3Y 1.7196%（持平）、5Y 1.8516%（+0.29BP逆势微升），5Y是全品种唯一利差走阔的期限。</p>
@@ -60,6 +67,10 @@
     <p><span class="head">交易所结构牛延续：</span>"玮盈3次"、"22龙湖01"涨超3%，"25深铁03"、"华能YK21"、"24润置02"涨超2%；尾部名券"23延经01"跌超4%、"12国债18"跌超3%，优质产业主体仍有一级二级联动空间、尾部博弈仍未平息。</p>
 
     <p><span class="head">理财行为：</span>一季度末理财规模31.9万亿，环比<span class="alert">-1.38万亿</span>、降幅超季节性；但理财增配债券、减配存单，<span class="data">对中短端信用尤其是二永债的配置需求仍有边际支撑</span>。</p>
+    <div class="chart-wrap">
+      <img src="assets/20260420_chart1_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
+      <p class="chart-caption">图1：信用债全品种近1年分位数 & 距2025年以来低点压缩空间（一图看完今日信用机会）</p>
+    </div>
 
     <h2>策略</h2>
     <div class="strategy">
@@ -85,6 +96,10 @@
     <p><span class="head">品种利差（中债估值口径）：</span><span class="data">10Y国开-国债隐含税率仅7.47BP</span>（活跃券口径10.40BP），国开相对国债凸性溢价已压至极薄水平；口行10Y持平、农发10Y-0.30BP（活跃券口径），<span class="head">"非国开"政金债的追涨意愿边际减弱</span>。国债期货：<span class="data">TL2606（30Y）+0.01%报113.270、T2606（10Y）+0.02%报108.715、TF2606（5Y）/TS2606（2Y）持平</span>，期货涨幅弱于现券活跃券，反映交易盘对长端追涨动能有所谨慎。</p>
     <p><span class="head">驱动层面：</span>现券强势的核心驱动仍是资金面充沛；超长期国债发行计划已落定、LPR连续第11个月持稳符合预期；市场本周重点关注政治局会议。一季度经济数据显示企稳迹象、政策进一步宽松紧迫性不高，叠加中东局势复杂下维持利率水平有助于稳定中美利差与人民币汇率压力——<span class="alert">这意味着央行短期宽松空间有限；活跃券与中债估值的分化提示长端博弈已进入赔率降低阶段</span>。</p>
     <div class="source">数据来源：活跃券数据取自DM查债通2026-04-20收盘成交；中债估值曲线取自《中债估值曲线-信用债净值曲线-全品种》xlsx日频序列（国债M1000158/M1000159/M1000160/M1000162/M1000164/M1000166/M1000169、国开M1004263/M1004265/M1004267/M1004269/M1004271/M1004274）；期限利差与隐含税率基于中债估值同期限自行计算；CFFEX国债期货（TL2606/T2606/TF2606/TS2606）及一级市场投标数据取自Wind资讯。</div>
+    <div class="chart-wrap">
+      <img src="assets/20260420_chart2_active_vs_cdb.png" alt="活跃券vs中债估值">
+      <p class="chart-caption">图2：利率债结构分化——活跃券 vs 中债估值（2026-04-20 BP变动）</p>
+    </div>
 
     <h2>三、信用债市场</h2>
     <p>中债估值口径下，信用债<span class="data">全品种跟随利率债小幅下行、信用利差全面小幅压缩0.5-1.5BP</span>，反映宽松资金面正在外溢至信用端。交易所品种继续呈现"个券分化、结构牛"特征，<span class="data">"玮盈3次"、"22龙湖01"涨超3%</span>，高等级地产/产业债强势；<span class="alert">"23延经01"跌超4%、"12国债18"跌超3%</span>显示尾部名券仍承压。</p>
@@ -104,6 +119,10 @@
       <p class="strategy-item"><span class="strategy-num">3. 防御仓位+尾部警戒：</span>整体仓位维持中久期防御配置（<span class="data">3-5Y二永AAA-+1-3Y城投AAA+1-3Y中短票AAA</span>），下沉AA+/AA严筛区域财政与化债进度，规避尾部名券；关注本周政治局会议政策信号。</p>
     </div>
     <div class="source">数据来源：《信用债净值曲线-全品种》中债估值日频数据库——中短票AAA(M1000532/M1000534/M1000536)、城投AAA(M1000381/M1000383/M1000385)、银行二级资本债AAA-(M1010704/M1010706/M1010708)、银行二级资本债AA+(M1010719/M1010721/M1010723)、国债(M1000158/M1000160/M1000162)；信用利差基于同期限中债国债估值自行计算；分位数与2025年以来最低点基于日频工作日序列统计；交易所个券涨跌幅、理财规模数据取自Wind资讯。</div>
+    <div class="chart-wrap">
+      <img src="assets/20260420_chart1_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
+      <p class="chart-caption">图1：信用债全品种近1年分位数 & 距2025年以来低点压缩空间（一图看完今日信用机会）</p>
+    </div>
   </div>
 
   <div class="footer">
