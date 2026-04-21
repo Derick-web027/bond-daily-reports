@@ -55,7 +55,20 @@
   .tag-bad{background:#F8D7DA;color:var(--clr-alert)}
   .tag-warn{background:#FFE3B8;color:var(--clr-orange-deep)}
   .concl-flip{margin-top:10px;padding-top:10px;border-top:1px dashed #E9D9B8;font-size:12.5px;line-height:1.6;color:var(--clr-gray-sub);text-indent:0}
-  .concl-flip strong{color:var(--clr-orange-deep);font-size:13px}
+  .concl-flip > strong{color:var(--clr-orange-deep);font-size:13px;display:block;margin-bottom:6px}
+  .flip-list{list-style:none;padding:0;margin:0}
+  .flip-list li{display:flex;align-items:flex-start;padding:5px 0;border-top:1px dotted #EADFC4;line-height:1.55}
+  .flip-list li:first-child{border-top:none}
+  .flip-cond{flex:0 0 36%;font-weight:700;color:var(--clr-alert);padding-right:10px;font-size:12.5px}
+  .flip-arrow{flex:0 0 18px;color:var(--clr-gray-text);font-weight:700;text-align:center}
+  .flip-act{flex:1;color:var(--clr-gray-sub);font-size:12.5px;padding-left:8px}
+  .flip-act strong{color:var(--clr-gray-text);font-weight:700}
+  @media(max-width:640px){
+    .flip-list li{flex-direction:column}
+    .flip-cond{flex:auto;margin-bottom:2px}
+    .flip-arrow{display:none}
+    .flip-act{padding-left:12px}
+  }
 
   h2{font-size:17px;color:var(--clr-orange-deep);border-left:4px solid var(--clr-orange);padding-left:12px;margin:26px 0 12px 0;font-weight:700}
   p{margin:10px 0;text-indent:2em;font-size:14.5px;color:var(--clr-gray-text);line-height:1.75}
@@ -131,7 +144,14 @@
         <li><span class="tag tag-bad">❌ 不追</span>长端利率债活跃券——活跃券与中债估值分化、配置盘未跟进，<strong>牛平末期赔率低</strong></li>
       </ul>
       <div class="concl-flip">
-        <strong>翻转信号：</strong>①10Y国债1.75%/30Y 2.23%关口 &nbsp;|&nbsp; ②R-DR利差>15BP→去杠杆 &nbsp;|&nbsp; ③理财赎回压力超预期 &nbsp;|&nbsp; ④基金久期接近3年→超长信用止盈 &nbsp;|&nbsp; ⑤10Y AAA中短票-3Y利差压至25-30BP→安全垫极薄
+        <strong>翻转信号·触发后立即操作：</strong>
+        <ul class="flip-list">
+          <li><span class="flip-cond">① 10Y国债触及1.75% / 30Y触及2.23%</span><span class="flip-arrow">→</span><span class="flip-act">央行合意区间边界、下行动能衰减，<strong>长端利率债减仓兑现、暂停超长信用新增买入</strong>（利率不动、信用必跟不上）</span></li>
+          <li><span class="flip-cond">② R-DR利差走阔至 >15BP</span><span class="flip-arrow">→</span><span class="flip-act">流动性分层重现、加杠杆窗口关闭，<strong>去杠杆至≤105%、减仓中低等级久期品种</strong></span></li>
+          <li><span class="flip-cond">③ 理财规模降幅超季节性 + 信用债卖盘放量</span><span class="flip-arrow">→</span><span class="flip-act">赎回压力前兆，<strong>5Y以上二永减仓至核心底仓下限、切1-3Y高等级防御</strong></span></li>
+          <li><span class="flip-cond">④ 中长期纯债基金久期 ≥2.9 年</span><span class="flip-arrow">→</span><span class="flip-act">超长拥挤度极值（历史24.7/25.6均在触发后3-4周见顶），<strong>分批减仓20/30Y超长信用、向10Y以内集中</strong></span></li>
+          <li><span class="flip-cond">⑤ 10Y AAA中短票-3Y利差 ≤25-30BP</span><span class="flip-arrow">→</span><span class="flip-act">超长空间透支、安全垫极薄，<strong>止盈超长信用、转配5-7Y二永中段品种</strong></span></li>
+        </ul>
       </div>
     </div>
 
