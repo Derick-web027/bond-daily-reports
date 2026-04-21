@@ -3,129 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>信用日报：20260420 - 中短票AAA短端破新低，信用利差全面压缩</title>
+<title>信用日报：20260420 - 中短票AAA破新低，二级资本债5Y仍是相对价值洼地</title>
 <style>
-  :root{--clr-data:#1F4E79;--clr-alert:#C00000;--clr-head:#262626;--clr-sub:#595959;--clr-mute:#7F7F7F;--clr-bg:#fafafa;--clr-card:#fff;--clr-border:#e5e5e5}
+  :root{
+    --clr-orange:#D97706;       /* 主题橙（深琥珀）*/
+    --clr-orange-deep:#B45309;  /* 标题用更深橙 */
+    --clr-orange-soft:#FFF4E0;  /* 结论卡片底色 */
+    --clr-orange-bar:#F59E0B;   /* 强调条 */
+    --clr-gray-bg:#F7F6F4;      /* 页面底色（暖灰）*/
+    --clr-gray-card:#FFFFFF;
+    --clr-gray-border:#E5E0D9;
+    --clr-gray-text:#3A3632;    /* 主文字 */
+    --clr-gray-sub:#6B635A;     /* 副文字 */
+    --clr-gray-mute:#9A928A;
+    --clr-data:#1F4E79;         /* 关键数据深蓝 */
+    --clr-alert:#C00000;        /* 警示深红 */
+    --clr-good:#2E7D32;         /* 正面绿 */
+  }
   *{box-sizing:border-box}
-  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","等线",sans-serif;background:var(--clr-bg);color:#333;margin:0;padding:24px 12px;line-height:1.7}
-  .container{max-width:820px;margin:0 auto;background:var(--clr-card);padding:40px 48px;border:1px solid var(--clr-border);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
-  h1{font-size:26px;text-align:center;color:var(--clr-head);margin:0 0 8px 0;font-weight:700}
-  .subtitle{text-align:center;font-size:16px;font-style:italic;color:var(--clr-sub);font-weight:600;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--clr-border)}
-  h2{font-size:18px;color:var(--clr-head);border-left:4px solid var(--clr-data);padding-left:12px;margin:28px 0 12px 0}
-  p{margin:10px 0;text-indent:2em;font-size:15px}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","等线",sans-serif;background:var(--clr-gray-bg);color:var(--clr-gray-text);margin:0;padding:24px 12px;line-height:1.7}
+  .container{max-width:860px;margin:0 auto;background:var(--clr-gray-card);padding:0;border:1px solid var(--clr-gray-border);border-radius:10px;box-shadow:0 2px 8px rgba(139,90,20,0.06);overflow:hidden}
+  .header-band{background:linear-gradient(135deg,var(--clr-orange) 0%,var(--clr-orange-deep) 100%);color:#fff;padding:28px 44px 22px}
+  .header-band h1{font-size:26px;margin:0;font-weight:700;letter-spacing:1px}
+  .header-band .subtitle{font-size:15px;margin-top:8px;font-weight:500;opacity:0.96;letter-spacing:0.3px}
+  .header-band .nav-back{color:#FFEDD2;text-decoration:none;font-size:13px;display:inline-block;margin-bottom:12px}
+  .header-band .nav-back:hover{text-decoration:underline;color:#fff}
+  .content{padding:24px 44px 36px}
+
+  /* mode-toggle */
+  .mode-toggle{text-align:right;margin-bottom:14px;border-bottom:1px solid var(--clr-gray-border);padding-bottom:10px}
+  .mode-toggle button{font-size:13px;padding:6px 16px;border:1px solid var(--clr-gray-border);background:#fff;border-radius:20px;cursor:pointer;margin-left:6px;color:var(--clr-gray-sub);transition:all .15s}
+  .mode-toggle button:hover{border-color:var(--clr-orange)}
+  .mode-toggle button.active{background:var(--clr-orange);color:#fff;border-color:var(--clr-orange)}
+
+  /* 结论卡片（最前） */
+  .concl-card{background:var(--clr-orange-soft);border-left:5px solid var(--clr-orange);border-radius:4px;padding:18px 22px;margin:8px 0 22px}
+  .concl-card-title{font-size:13px;font-weight:700;color:var(--clr-orange-deep);letter-spacing:3px;margin-bottom:10px;text-transform:uppercase}
+  .concl-regime{font-size:15px;line-height:1.6;margin:0 0 12px;text-indent:0}
+  .concl-regime .tag-regime{display:inline-block;background:var(--clr-orange);color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:700;margin-right:8px}
+  .concl-list{list-style:none;padding:0;margin:0}
+  .concl-list li{padding:6px 0;border-top:1px dashed #E9D9B8;font-size:14px;line-height:1.6;text-indent:0}
+  .concl-list li:first-child{border-top:none}
+  .concl-list .tag{display:inline-block;font-weight:700;padding:1px 9px;border-radius:10px;font-size:12px;margin-right:8px;min-width:54px;text-align:center}
+  .tag-good{background:#D1EAD2;color:var(--clr-good)}
+  .tag-bad{background:#F8D7DA;color:var(--clr-alert)}
+  .tag-warn{background:#FFE3B8;color:var(--clr-orange-deep)}
+  .concl-flip{margin-top:10px;padding-top:10px;border-top:1px dashed #E9D9B8;font-size:12.5px;line-height:1.6;color:var(--clr-gray-sub);text-indent:0}
+  .concl-flip strong{color:var(--clr-orange-deep);font-size:13px}
+
+  h2{font-size:17px;color:var(--clr-orange-deep);border-left:4px solid var(--clr-orange);padding-left:12px;margin:26px 0 12px 0;font-weight:700}
+  p{margin:10px 0;text-indent:2em;font-size:14.5px;color:var(--clr-gray-text);line-height:1.75}
   p.no-indent{text-indent:0}
   .data{color:var(--clr-data);font-weight:600}
   .alert{color:var(--clr-alert);font-weight:600}
-  .head{color:var(--clr-head);font-weight:600}
-  .source{font-size:12px;font-style:italic;color:var(--clr-mute);border-left:2px solid var(--clr-border);padding:6px 10px;margin:4px 0 16px 0;text-indent:0;background:#f7f7f7;border-radius:0 4px 4px 0}
-  .strategy{background:#f8f9fb;border:1px solid var(--clr-border);border-radius:6px;padding:14px 20px;margin:8px 0}
-  .strategy-item{margin:8px 0;text-indent:0;padding-left:8px}
-  .strategy-num{color:var(--clr-head);font-weight:700;margin-right:4px}
-  .footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--clr-border);font-size:12px;color:var(--clr-mute);text-align:center}
-  .chart-wrap{margin:18px -8px;text-align:center}
-  .chart-wrap img{max-width:100%;height:auto;border:1px solid var(--clr-border);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
-  .chart-caption{font-size:12px;color:var(--clr-mute);font-style:italic;margin-top:6px;text-indent:0}
-  .mode-toggle{position:sticky;top:12px;text-align:right;margin-bottom:-20px;z-index:10}
-  .mode-toggle button{font-size:13px;padding:6px 14px;border:1px solid var(--clr-border);background:#fff;border-radius:20px;cursor:pointer;margin-left:6px}
-  .mode-toggle button.active{background:var(--clr-data);color:#fff;border-color:var(--clr-data)}
+  .good{color:var(--clr-good);font-weight:600}
+  .head{color:var(--clr-gray-text);font-weight:600}
+
+  .source{font-size:12px;font-style:italic;color:var(--clr-gray-mute);border-left:3px solid var(--clr-gray-border);padding:6px 10px;margin:4px 0 16px 0;text-indent:0;background:#FAFAF8;border-radius:0 4px 4px 0;line-height:1.55}
+
+  .chart-wrap{margin:18px -4px;text-align:center}
+  .chart-wrap img{max-width:100%;height:auto;border:1px solid var(--clr-gray-border);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+  .chart-caption{font-size:12px;color:var(--clr-gray-mute);font-style:italic;margin-top:6px;text-indent:0}
+
+  /* 策略矩阵表格 */
+  .strategy-matrix{margin:10px 0;border:1px solid var(--clr-gray-border);border-radius:6px;overflow:hidden}
+  .strategy-matrix .row{display:flex;padding:10px 14px;border-bottom:1px solid var(--clr-gray-border);font-size:13.5px;line-height:1.55;align-items:flex-start}
+  .strategy-matrix .row:last-child{border-bottom:none}
+  .strategy-matrix .row:nth-child(odd){background:#FAFAF8}
+  .strategy-matrix .col-tag{width:115px;font-weight:700;flex-shrink:0}
+  .strategy-matrix .col-tag.good{color:var(--clr-good)}
+  .strategy-matrix .col-tag.warn{color:var(--clr-orange-deep)}
+  .strategy-matrix .col-tag.bad{color:var(--clr-alert)}
+  .strategy-matrix .col-body{flex:1;color:var(--clr-gray-text)}
+
+  .portfolio-box{background:#FFF9ED;border:1px solid #F3E1B8;border-radius:6px;padding:12px 16px;margin:14px 0;font-size:13.5px;line-height:1.65;text-indent:0}
+  .portfolio-box strong{color:var(--clr-orange-deep)}
+
   .hidden{display:none}
-  .nav-back{display:inline-block;margin-bottom:12px;color:var(--clr-data);text-decoration:none;font-size:14px}
-  .nav-back:hover{text-decoration:underline}
-  @media(max-width:640px){body{padding:12px 0}.container{padding:24px 16px;border-radius:0;border:none}h1{font-size:22px}.subtitle{font-size:14px}h2{font-size:16px}p{font-size:14px;text-indent:1.5em}}
+  .footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--clr-gray-border);font-size:12px;color:var(--clr-gray-mute);text-align:center}
+
+  @media(max-width:640px){
+    body{padding:10px 4px}
+    .container{border-radius:6px}
+    .header-band{padding:20px 20px 16px}
+    .header-band h1{font-size:21px}
+    .header-band .subtitle{font-size:13px}
+    .content{padding:16px 18px 22px}
+    .concl-card{padding:14px 14px;margin-bottom:16px}
+    h2{font-size:15.5px}
+    p{font-size:14px;text-indent:1.5em}
+    .strategy-matrix .row{flex-direction:column;padding:10px 12px}
+    .strategy-matrix .col-tag{width:auto;margin-bottom:4px}
+  }
 </style>
 </head>
 <body>
 <div class="container">
-  <a href="../" class="nav-back">← 返回日报列表</a>
-  <div class="mode-toggle">
-    <button class="active" onclick="showMode('brief',this)">精简版</button>
-    <button onclick="showMode('detail',this)">详细版</button>
+  <div class="header-band">
+    <a href="../" class="nav-back">← 返回日报列表</a>
+    <h1>信用日报：20260420</h1>
+    <div class="subtitle">中短票AAA破新低，二级资本债5Y仍是相对价值洼地</div>
   </div>
 
-  <h1>信用日报：20260420</h1>
-  <div class="subtitle">中短票AAA短端破新低，信用利差全面压缩</div>
-
-  <!-- ============== 精简版 ============== -->
-  <div id="brief">
-    <h2>资金面</h2>
-    <p>央行5亿7天逆回购等额对冲、零净投放，利率1.40%。<span class="data">DR001加权小幅下行、停留1.21%低位</span>；X-repo银行隔夜1.2%供给充沛、非银质押隔夜1.35%-1.37%，<span class="data">R-DR利差极窄、分层几乎消失</span>；<span class="data">1Y AAA同业存单1.4675%（-0.25BP）、3M 1.3750%（-1.50BP），短端降幅更大</span>。本月季度缴税大月，但资金充裕、<span class="head">干扰预计有限</span>。</p>
-
-    <h2>利率债</h2>
-    <p><span class="alert">活跃券与中债估值曲线结构分化显著</span>——活跃券端<span class="data">10Y国债-0.55BP至1.7545%、30Y-0.50BP、10Y国开-0.85BP</span>，交易盘追长端；但中债估值国债全曲线近乎持平（10Y仅+0.04BP），长端非活跃老券并未跟进。<span class="data">国开曲线牛平（短端+0.5BP、10Y-0.34BP，10Y-1Y利差压缩0.85BP至43BP）</span>，<span class="head">10Y隐含税率（中债估值口径）仅7.47BP</span>已极薄——<span class="alert">交易盘抢活跃券、配置盘按兵不动，长端博弈赔率降低</span>。</p>
-    <div class="chart-wrap">
-      <img src="assets/20260420_chart1_rates_divergence.png" alt="利率债活跃券vs中债估值分化">
-      <p class="chart-caption">图1　利率债结构分化——活跃券 vs 中债估值（2026-04-20 BP变动）</p>
+  <div class="content">
+    <div class="mode-toggle">
+      <button class="active" onclick="showMode('brief',this)">精简版</button>
+      <button onclick="showMode('detail',this)">详细版</button>
     </div>
 
-    <h2>信用债（核心）</h2>
-    <p>中债估值口径下信用债<span class="data">全品种利差小幅压缩0.5-1.5BP</span>，但不同品种相对价值已显著分化。<span class="alert">今日核心判断：首选超配5Y银行二级资本债AAA-，严格规避中短票AAA 1Y与城投AAA全曲线追涨</span>。</p>
-
-    <p><span class="head">中短票AAA是今日最核心信号源</span>——1Y下行0.67BP至1.5351%、<span class="alert">刷新2025年以来最低点</span>，近1年分位数（2025-04-21至今工作日样本）仅0.4%；3Y持平、5Y反小幅走高0.29BP并是全品种唯一利差走阔的期限。曲线呈现短端极致压缩、长端边际走弱特征，1Y进一步压缩空间几乎为零。</p>
-
-    <p><span class="head">城投AAA是全市场最极致压缩的板块</span>——全曲线近1年分位数均<2.5%（1.2%/2.4%/0.8%），其中5Y仅<span class="alert">0.8%为全市场之最、距2025年以来低点仅0.27BP</span>，1Y/3Y距低点0.23/0.76BP同样近乎贴底。<span class="data">城投AAA已几乎无进一步压缩空间，建议规避5Y拉久期追利差、仅保留1-3Y作为票息底仓</span>。</p>
-
-    <p><span class="head">银行二级资本债AAA-是当前最具相对价值的板块</span>——<span class="data">5Y近1年分位数24.3%、距2025年以来低点20.68BP</span>，显著高于同期限城投AAA（0.8%/0.27BP）与中短票AAA（2.8%/5.82BP），<span class="data">是信用债中唯一仍有10BP以上压缩空间的高等级品种，首选超配</span>。AA+ 5Y今日-1.41BP、单日利差压缩1.58BP，下沉收益显现；活跃个券"26工行二级资本债01BC"、"24建二级资本债01B"均小幅下行与曲线数据印证。</p>
-
-    <p><span class="head">理财行为：</span>一季度末理财规模31.9万亿，环比<span class="alert">-1.38万亿、降幅超季节性</span>；但资产端明显增配债券、减配存单，<span class="data">对中短端信用尤其是二永债的配置需求仍有边际支撑</span>。</p>
-    <div class="chart-wrap">
-      <img src="assets/20260420_chart2_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
-      <p class="chart-caption">图2　信用债全品种近1年分位数 & 距2025年以来低点压缩空间（一图看完今日信用机会）</p>
+    <!-- ============== 结论卡片（精简版/详细版共用） ============== -->
+    <div class="concl-card">
+      <div class="concl-card-title">◆ 核心判断 ◆</div>
+      <p class="concl-regime">
+        <span class="tag-regime">市场定性</span>
+        <strong style="color:var(--clr-orange-deep)">长期震荡市 + 牛平末期</strong>——A股放量反弹压制债市情绪，国开曲线牛平但长端分位已极低，<span class="alert">拉久期赔率降低、挖品种α与保杠杆成为主线</span>。
+      </p>
+      <ul class="concl-list">
+        <li><span class="tag tag-good">✅ 超配</span>5Y 银行二级资本债 AAA-（近1年分位 24.3%、距25年低点 20.68BP，<strong>唯一仍有10+BP压缩空间的高等级品种</strong>），目标权重 ≥30%</li>
+        <li><span class="tag tag-bad">❌ 规避</span>中短票AAA 1Y（破25年新低、近1年分位 0.4%）、城投AAA 5Y（分位 0.8%、距低点 0.27BP）——<strong>贴底接盘风险大于收益</strong></li>
+        <li><span class="tag tag-bad">❌ 不追</span>长端利率债活跃券——活跃券下行0.5BP+但中债估值曲线持平，<strong>配置盘未跟进，牛平末期赔率低</strong></li>
+      </ul>
+      <div class="concl-flip">
+        <strong>翻转信号：</strong>①政治局超预期宽松→重启久期 &nbsp;|&nbsp; ②R-DR利差>15BP→去杠杆 &nbsp;|&nbsp; ③活跃券与中债估值利差重走阔→长端机会重现 &nbsp;|&nbsp; ④股债跷跷板+赎回→二永或成错杀
+      </div>
     </div>
 
-    <h2>策略</h2>
-    <div class="strategy">
-      <p class="strategy-item"><span class="strategy-num">1.</span><span class="data">首选超配：</span>5Y银行二级资本债AAA-，目标权重≥30%（近1年分位24.3%、距低点20.68BP，唯一仍有10BP以上压缩空间的高等级品种）；AA+ 5Y小仓位下沉（≤10%）。</p>
-      <p class="strategy-item"><span class="strategy-num">2.</span><span class="alert">严格规避：</span>中短票AAA 1Y（已破25年低点）不新增；城投AAA 5Y（分位0.8%、距低点0.27BP）清仓，仅保留1-3Y票息；长端利率债活跃券不追涨。</p>
-      <p class="strategy-item"><span class="strategy-num">3.</span><span class="head">仓位结构：</span>3-5Y二永AAA- 30-40% + 1-3Y城投AAA 20-25% + 1-3Y中短票AAA 10-15% + 现金≥10%。关注本周政治局会议政策信号。</p>
-      <p class="strategy-item"><span class="strategy-num">4.</span><span class="alert">事件关注：</span>本周政治局会议政策信号、税期走款对资金扰动。</p>
+    <!-- ============== 精简版 ============== -->
+    <div id="brief">
+      <h2>资金面</h2>
+      <p>央行5亿7天逆回购等额对冲、零净投放，利率1.40%。<span class="data">DR001加权小幅下行、停留1.21%低位</span>；X-repo银行隔夜1.2%供给充沛、非银质押隔夜1.35%-1.37%，<span class="data">R-DR利差极窄、分层几乎消失</span>；<span class="data">1Y AAA同业存单1.4675%（-0.25BP）、3M 1.3750%（-1.50BP），短端降幅更大</span>。本月季度缴税大月，但资金充裕、<span class="head">干扰预计有限</span>。</p>
+
+      <h2>利率债</h2>
+      <p><span class="alert">活跃券与中债估值曲线结构分化显著</span>——活跃券端<span class="data">10Y国债-0.55BP至1.7545%、30Y-0.50BP、10Y国开-0.85BP</span>，交易盘追长端；但中债估值国债全曲线近乎持平（10Y仅+0.04BP）。<span class="data">国开曲线牛平（短端+0.5BP、10Y-0.34BP，10Y-1Y利差压缩0.85BP至43BP）</span>，<span class="head">10Y隐含税率（中债估值口径）仅7.47BP</span>——配置盘未跟进，牛平末期追长端赔率低。</p>
+      <div class="chart-wrap">
+        <img src="assets/20260420_chart1_rates_divergence.png" alt="利率债活跃券vs中债估值">
+        <p class="chart-caption">图1　利率债结构分化：活跃券续强 vs 中债估值持平微升</p>
+      </div>
+
+      <h2>信用债（核心）</h2>
+      <p>全品种利差压缩0.5-1.5BP但极致分化：<span class="alert">中短票AAA 1Y破25年新低（近1年分位0.4%）、城投AAA全曲线分位<2.5%（5Y仅0.8%、距低点0.27BP）已贴底</span>；唯<span class="good">银行二级资本债AAA- 5Y近1年分位24.3%、距低点20.68BP，仍有10BP+压缩空间，是当前唯一结构α品种</span>。理财规模31.9万亿（-1.38万亿）但增配债券，中短端二永仍有支撑。<span class="head">保险视角：</span>30Y-10Y利差49BP>25BP阈值但配置盘观望；偿二代后永续债因基础因子更低可作替代考虑。</p>
+      <div class="chart-wrap">
+        <img src="assets/20260420_chart2_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
+        <p class="chart-caption">图2　信用债全品种近1年分位数 & 距2025年以来低点压缩空间</p>
+      </div>
+
+      <h2>策略矩阵</h2>
+      <div class="strategy-matrix">
+        <div class="row"><span class="col-tag good">✅ 品种（首选）</span><span class="col-body">超配5Y二级资本债AAA- 30-40%；止盈位再压缩8BP</span></div>
+        <div class="row"><span class="col-tag good">✅ 骑乘</span><span class="col-body">5Y→4Y→3Y二级资本债，曲线陡峭度支撑双重收益</span></div>
+        <div class="row"><span class="col-tag good">✅ 票息底仓</span><span class="col-body">1-3Y城投AAA 20-25% + 1-3Y中短票AAA 10-15%</span></div>
+        <div class="row"><span class="col-tag good">✅ 杠杆</span><span class="col-body">保持110-115%，关注月末+政治局会议</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 下沉</span><span class="col-body">仅5Y二级资本债AA+小仓位（≤10%）参与</span></div>
+        <div class="row"><span class="col-tag bad">❌ 久期</span><span class="col-body">牛平末期+长端分位极低，退出长端博弈</span></div>
+        <div class="row"><span class="col-tag bad">❌ 波段</span><span class="col-body">震荡市缺明确方向，胜率低不作主策略</span></div>
+      </div>
+
+      <div class="portfolio-box">
+        <strong>组合结构：</strong> 3-5Y二永AAA- 30-40% + 1-3Y城投AAA 20-25% + 1-3Y中短票AAA 10-15% + 5Y二级AA+ ≤10% + 5Y永续AAA- 0-10% + 现金≥10%；杠杆率110-115%。
+      </div>
     </div>
-  </div>
 
-  <!-- ============== 详细版 ============== -->
-  <div id="detail" class="hidden">
-    <h2>一、公开市场与资金面</h2>
-    <p>央行4月20日以固定利率、数量招标方式开展<span class="data">5亿元7天逆回购</span>操作对冲等量到期，<span class="head">零净投放、操作利率维持1.40%</span>。银行间资金面延续十分宽松格局，<span class="data">DR001加权平均小幅下行并停留于1.21%低位</span>。匿名点击系统（X-repo）上，<span class="data">银行隔夜报价低至1.2%供给充沛，非银机构质押存单/信用债融入隔夜报价基本停留在1.35%-1.37%区间</span>，<span class="head">R-DR利差极窄、流动性分层几乎消失</span>。</p>
-    <p>存单方面，<span class="data">1Y AAA同业存单到期收益率收于1.4675%（-0.25BP）、3M存单1.3750%（-1.50BP）</span>，短端存单下行幅度更大，银行短期负债成本继续边际改善、一级供给压力可控。</p>
-    <p><span class="head">税期展望：</span>税期即将走款，本月又是季度缴税大月，对流动性的考验将至；但考虑当前资金面的充裕程度，<span class="data">预计税期总体干扰仍有限</span>。一级市场，农发行1Y/3Y/10Y金融债中标分别为1.2872%/1.4024%/1.8169%，<span class="data">全场倍数高达9.92/3.24/6.66</span>，短端认购热度极高，反映配置盘在宽松资金面下积极承接供给。</p>
-    <div class="source">数据来源：Wind资讯（央行公开市场操作、X-repo报价、一级市场投标、DR001日内值）；同业存单AAA 1Y/3M收益率取自《中债估值曲线-信用债净值曲线-全品种》xlsx（M1010885/M1010882）。</div>
+    <!-- ============== 详细版 ============== -->
+    <div id="detail" class="hidden">
+      <h2>一、公开市场与资金面</h2>
+      <p>央行4月20日以固定利率、数量招标方式开展<span class="data">5亿元7天逆回购</span>操作对冲等量到期，<span class="head">零净投放、操作利率维持1.40%</span>。银行间资金面延续十分宽松格局，<span class="data">DR001加权平均小幅下行并停留于1.21%低位</span>。匿名点击系统（X-repo）上，<span class="data">银行隔夜报价低至1.2%供给充沛、非银机构质押存单/信用债融入隔夜报价基本停留在1.35%-1.37%区间</span>，<span class="head">R-DR利差极窄、流动性分层几乎消失——这是杠杆策略可持续的直接支撑</span>。</p>
+      <p>存单方面，<span class="data">1Y AAA同业存单到期收益率收于1.4675%（-0.25BP）、3M存单1.3750%（-1.50BP）</span>，短端存单下行幅度更大，银行短期负债成本继续边际改善、一级供给压力可控。税期即将走款、本月为季度缴税大月，但考虑当前资金面充裕程度，<span class="data">预计税期总体干扰仍有限</span>。一级市场，农发行1Y/3Y/10Y金融债中标分别为1.2872%/1.4024%/1.8169%，<span class="data">全场倍数高达9.92/3.24/6.66</span>，短端认购热度极高，反映配置盘在宽松资金面下积极承接供给。</p>
+      <div class="source">数据来源：Wind资讯（央行公开市场操作、X-repo报价、一级市场投标、DR001日内值）；同业存单AAA 1Y/3M收益率取自《中债估值曲线-日度-信用债净值曲线-全品种》xlsx（M1010885/M1010882）。</div>
 
-    <h2>二、利率债与债市总览</h2>
-    <p>今日利率债最突出的特征是<span class="alert">活跃券与中债估值曲线的结构分化</span>。活跃券端，<span class="data">10Y国债"26附息国债05"下行0.55BP收于1.7545%、30Y"26附息国债02"下行0.50BP至2.2530%、10Y国开"25国开20"下行0.85BP至1.8585%</span>，10Y国债逼近1.75%关口，交易盘在长端活跃券上显著加码。但同日中债估值曲线口径下，<span class="data">国债全曲线近乎持平、仅30Y小幅走高0.56BP</span>——长端活跃券单日下行0.5BP以上，并未带动非活跃老券同步回暖，<span class="alert">交易盘抢活跃券、配置盘按兵不动</span>，活跃券的流动性溢价在宽松资金面下被重估压薄。</p>
-    <p>曲线形态层面，国债曲线几乎整体平移，10Y-1Y期限利差维持在60BP附近；<span class="data">国开曲线则呈现明显牛平</span>，短端1Y/3Y/5Y普遍上行约0.5BP、长端10Y反而下行0.34BP，10Y-1Y国开期限利差单日压缩约0.85BP至43BP——这通常是配置盘对长端真实买盘、而短端获利止盈的信号组合。品种利差上，<span class="data">中债估值口径下10Y国开-国债隐含税率仅7.47BP（活跃券口径10.40BP）</span>，国开相对国债的凸性溢价已压至极薄水平；口行10Y持平、农发10Y小幅下行0.30BP，<span class="head">非国开政金债追涨意愿边际减弱</span>。国债期货方面，TL2606（30Y）+0.01%、T2606（10Y）+0.02%、TF/TS主力持平，期货涨幅弱于现券活跃券，交易盘对长端追涨的谨慎态度可见一斑。</p>
-    <p><span class="head">驱动层面：</span>现券强势的核心支撑仍是资金面持续充沛——超长期国债发行计划已落定、LPR连续第11个月持稳符合预期，市场本周重点关注政治局会议。结合一季度经济数据企稳迹象、中美利差与人民币汇率约束，央行短期进一步宽松的紧迫性不高；<span class="alert">活跃券与中债估值的结构分化提示长端博弈已进入赔率降低阶段，配置盘的谨慎值得警觉</span>。</p>
-    <div class="source">数据来源：活跃券数据取自DM查债通2026-04-20收盘成交；中债估值曲线取自《中债估值曲线-日度-信用债净值曲线-全品种》xlsx日频序列（国债M1000158/M1000160/M1000162/M1000164/M1000166/M1000169、国开M1004263/M1004265/M1004267/M1004269/M1004271/M1004274）；期限利差与隐含税率基于中债估值同期限自行计算；CFFEX国债期货及一级市场投标数据取自Wind资讯。</div>
-    <div class="chart-wrap">
-      <img src="assets/20260420_chart1_rates_divergence.png" alt="利率债活跃券vs中债估值分化">
-      <p class="chart-caption">图1　利率债结构分化——活跃券 vs 中债估值（2026-04-20 BP变动）</p>
+      <h2>二、利率债与债市总览</h2>
+      <p>今日利率债最突出的特征是<span class="alert">活跃券与中债估值曲线的结构分化</span>。活跃券端，<span class="data">10年期国债"26附息国债05"下行0.55BP至1.7545%</span>、<span class="data">30年期"26附息国债02"下行0.50BP至2.2530%</span>、<span class="data">10年期国开"25国开20"下行0.85BP至1.8585%</span>，10Y国债逼近1.75%关口，交易盘在长端活跃券上显著加码。但同日中债估值曲线口径下，<span class="data">国债全曲线近乎持平、仅30Y小幅走高0.56BP</span>——长端活跃券单日下行0.5BP以上并未带动非活跃老券同步回暖，<span class="alert">交易盘抢活跃券、配置盘按兵不动</span>，活跃券的流动性溢价在宽松资金面下被重估压薄。</p>
+      <p>曲线形态层面，国债曲线几乎整体平移（10Y-1Y期限利差维持60BP附近）；<span class="data">国开曲线则呈现明显牛平——短端1Y/3Y/5Y普遍+0.5BP、长端10Y-0.34BP，10Y-1Y国开期限利差单日压缩约0.85BP至43BP</span>。<span class="data">中债估值口径10Y国开-国债隐含税率仅7.47BP</span>（活跃券口径10.40BP），国开相对国债凸性溢价已压至极薄水平。按华泰信用策略框架，"牛平→中长久期占优"的传统规律当前并不适用——<span class="alert">长端分位数已极低、配置盘未跟进、期货涨幅弱于现券，这些都是"牛平末期"的典型信号，追长端等同于在末端接盘</span>。</p>
+      <p><span class="head">驱动层面：</span>现券强势的核心支撑仍是资金面持续充沛；但一季度经济数据显示企稳迹象、LPR连续第11个月持稳，央行短期进一步宽松紧迫性不高。市场本周重点关注政治局会议。</p>
+      <div class="source">数据来源：活跃券=DM查债通2026-04-20收盘成交；中债估值曲线=中债估值-日度xlsx日频序列（国债M1000158/M1000160/M1000162/M1000166/M1000169、国开M1004263/M1004265/M1004267/M1004271/M1004274）；期限利差与隐含税率基于中债估值同期限自行计算；CFFEX国债期货及一级市场投标数据取自Wind资讯。</div>
+      <div class="chart-wrap">
+        <img src="assets/20260420_chart1_rates_divergence.png" alt="利率债活跃券vs中债估值">
+        <p class="chart-caption">图1　利率债结构分化——活跃券 vs 中债估值（2026-04-20 BP变动）</p>
+      </div>
+
+      <h2>三、信用债市场</h2>
+      <p>中债估值口径下，信用债<span class="data">全品种跟随利率债小幅下行、信用利差全面小幅压缩0.5-1.5BP</span>，宽松资金面正外溢至信用端。但今日最硬的信号是<span class="alert">不同品种的相对价值已极致分化</span>——<span class="head">中短票AAA是今日最核心信号源</span>，1Y下行0.67BP至1.5351%、<span class="alert">刷新2025年以来最低点，近1年分位数（2025-04-21至今工作日样本）仅0.4%</span>，意味着过去一年仅有极个别交易日低于今天；<span class="head">城投AAA是全市场最极致压缩的板块</span>，全曲线近1年分位数均<2.5%（1.2%/2.4%/0.8%），其中5Y仅0.8%为全市场之最、距2025年以来低点仅0.27BP，1Y/3Y距低点0.23/0.76BP同样近乎贴底。<span class="alert">进一步压缩空间几乎为零，在绝对价值极值位继续增持，风险收益比已严重恶化</span>。</p>
+      <p>与此形成鲜明对比的是，<span class="head">银行二级资本债AAA-是当前最具相对价值的板块</span>——5Y报1.9721%，<span class="good">近1年分位数24.3%、距2025年低点20.68BP</span>，两项指标均显著高于同期限城投AAA（0.8% / 0.27BP）与中短票AAA（2.8% / 5.82BP），<span class="good">是当前信用债中唯一仍有10BP以上压缩空间的高等级品种</span>。1Y/3Y分位虽已压至1.6%/2.0%，但仍有1-8BP的距低点空间。AA+ 5Y今日-1.41BP、利差单日压缩1.58BP，下沉收益显现。这正是华泰信用策略框架中<span class="data">"结构性资产荒下品种策略价值凸显"</span>的典型窗口——市场已从票息挖掘向结构α迁移。</p>
+      <p><span class="head">机构行为与保险视角：</span>一季度末理财规模31.9万亿，<span class="alert">环比-1.38万亿、降幅超季节性</span>（存款分流+打榜受限+分红险竞争），但资产端明显增配债券、减配存单，<span class="data">对中短端信用尤其是二永债的配置需求仍有边际支撑</span>。保险视角两个重要信号：①<span class="data">30Y-10Y国债期限利差（中债估值口径）49BP，显著高于25BP的险资增配经验阈值</span>，理论上超长端是险资负债驱动下的配置窗口；但活跃券与中债估值分化提示同业保险目前处于"等更好点位"的观望状态，跟进太早=给交易盘做对手盘。②偿二代二期过渡期2025年底结束后，<span class="head">二级资本债基础因子高于永续债</span>——对偿付能力承压的中小寿险而言，5Y永续AAA-可作为5Y二级资本债AAA-的替代或补充品种（需结合IFRS9会计处理口径综合评估）。</p>
+      <div class="source">数据来源：《信用债净值曲线-全品种》中债估值日频数据库——中短票AAA(M1000532/M1000534/M1000536)、城投AAA(M1000381/M1000383/M1000385)、银行二级资本债AAA-(M1010704/M1010706/M1010708)、银行二级资本债AA+(M1010719/M1010721/M1010723)、国债(M1000158/M1000160/M1000162)；信用利差基于同期限中债国债估值自行计算；分位数=近1年（2025-04-21至今）工作日样本；"2025年低点"指2025-01-01至今最低值；理财规模数据取自Wind资讯。框架借鉴华泰《信用策略复盘与框架重构》+华创《保险资金运作及配债行为变化》。</div>
+      <div class="chart-wrap">
+        <img src="assets/20260420_chart2_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
+        <p class="chart-caption">图2　信用债全品种近1年分位数 & 距2025年以来低点压缩空间</p>
+      </div>
+
+      <h2>四、策略矩阵与仓位建议</h2>
+      <div class="strategy-matrix">
+        <div class="row"><span class="col-tag good">✅ 品种（首选）</span><span class="col-body">超配5Y二级资本债AAA- 30-40%，止盈位再压缩8BP。这是"结构性资产荒下品种策略价值凸显"的典型应用——市场已从票息挖掘向结构α迁移。</span></div>
+        <div class="row"><span class="col-tag good">✅ 骑乘</span><span class="col-body">5Y→4Y→3Y二级资本债，曲线陡峭度足够（5Y-3Y约20BP），持有期间获"票息+曲线下移"双重收益。城投AAA骑乘价值不足（全曲线过于平坦）。</span></div>
+        <div class="row"><span class="col-tag good">✅ 票息底仓</span><span class="col-body">1-3Y城投AAA + 1-3Y中短票AAA作为组合票息底仓，不追5Y久期（近1年分位<2.5%、拉久期无收益只加风险）。</span></div>
+        <div class="row"><span class="col-tag good">✅ 杠杆</span><span class="col-body">R-DR利差极窄、1Y中短票-R007息差约20BP，杠杆仍是收益增厚来源——保持110-115%。观察止损信号：政治局会议、月末资金面、税期扰动。</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 下沉</span><span class="col-body">仅二级资本债AA+ 5Y小仓位（≤10%）参与——今日-1.41BP显示下沉需求开始释放；但低等级城投利差贴底、下沉空间有限，严格规避区域财政弱、化债进度慢的AA城投。</span></div>
+        <div class="row"><span class="col-tag bad">❌ 久期</span><span class="col-body">牛平末期+长端分位极低+配置盘未跟进——拉久期至5Y及以上的资本利得赔率不足。长端利率债活跃券不追涨，等待活跃券与中债估值利差重走阔或央行释放新宽松信号再介入。</span></div>
+        <div class="row"><span class="col-tag bad">❌ 波段</span><span class="col-body">当前处于震荡市、缺乏明确方向拐点，波段交易胜率低、交易成本高，不作主策略。</span></div>
+      </div>
+
+      <div class="portfolio-box">
+        <strong>组合结构：</strong> 3-5Y二级资本债AAA- 30-40%（核心底仓/品种α）+ 1-3Y城投AAA 20-25%（票息）+ 1-3Y中短票AAA 10-15%（流动性垫）+ 5Y二级资本债AA+ ≤10%（下沉增强）+ 5Y永续债AAA- 0-10%（偿付能力替代）+ 现金与短融 ≥10%（税期缓冲）；杠杆率110-115%。
+      </div>
+
+      <div class="source">策略框架借鉴华泰《信用策略复盘与框架重构》七大策略体系+五维分析+模式识别，保险视角借鉴华创《保险资金运作及配债行为变化》。本文结论基于框架+2026-04-20当日市场数据独立判断。</div>
     </div>
 
-    <h2>三、信用债市场</h2>
-    <p>中债估值口径下，信用债<span class="data">全品种跟随利率债小幅下行、信用利差全面小幅压缩0.5-1.5BP</span>，宽松资金面正在外溢至信用端。但不同品种的相对价值已显著分化——<span class="alert">今日的核心判断非常明确：首选超配银行二级资本债AAA- 5Y，严格规避中短票AAA 1Y及城投AAA全曲线追涨，长端利率债等待配置盘回归再参与</span>。</p>
-
-    <p><span class="head">中短票AAA是今日最核心信号源</span>——1Y下行0.67BP至1.5351%，<span class="alert">刷新2025年以来最低点</span>，近1年分位数（2025-04-21至今工作日样本）仅0.4%，意味着过去一年仅有极个别交易日低于今天。3Y基本持平、5Y反小幅走高0.29BP，也是全品种中唯一当日利差走阔的期限，<span class="head">曲线呈现短端极致压缩、长端边际走弱的特征</span>，1Y进一步压缩的空间几乎为零。</p>
-
-    <p><span class="head">城投AAA是今日全市场压缩最极致的板块</span>——全曲线（1Y/3Y/5Y）<span class="alert">近1年分位数均低于2.5%</span>（1.2%/2.4%/0.8%），其中5Y仅0.8%为全市场之最，当前收益率距2025年以来低点仅0.27BP；1Y距低点0.23BP、3Y距低点0.76BP同样近乎贴底。<span class="alert">城投AAA已几乎无进一步压缩空间，建议规避5Y拉久期追利差、仅保留1-3Y作为票息底仓</span>，5Y因分位数极低而估值波动风险大于潜在收益。</p>
-
-    <p><span class="head">银行二级资本债AAA-是当前最具相对价值的板块</span>——5Y报1.9721%，<span class="data">近1年分位数24.3%、距2025年以来低点20.68BP</span>，两项指标均显著高于同期限城投AAA（0.8% / 0.27BP）与中短票AAA（2.8% / 5.82BP），<span class="data">是当前信用债中唯一仍有10BP以上压缩空间的高等级品种，首选超配</span>。1Y/3Y分位虽已压至1.6%/2.0%，但仍有1-8BP的距低点空间。AA+ 5Y今日下行1.41BP、利差单日压缩1.58BP，下沉收益显现；活跃个券"26工行二级资本债01BC"、"24建二级资本债01B"收益率均小幅下行与曲线数据相互印证。</p>
-
-    <p><span class="head">【理财行为】</span>一季度末理财规模31.9万亿，<span class="alert">环比-1.38万亿、降幅超季节性</span>（存款分流+打榜产品受限+分红险销售火热共同作用）；资产端理财明显增配债券、减配存单、拆放同业及买入返售，<span class="data">对中短端信用尤其是二永债的配置需求仍有边际支撑</span>。</p>
-
-    <p class="head">【策略建议】</p>
-    <div class="strategy">
-      <p class="strategy-item"><span class="strategy-num">1. </span><span class="data">首选超配：5Y银行二级资本债AAA-。</span>当前信用债中唯一仍有10BP以上压缩空间的高等级品种——近1年分位数24.3%、距2025年以来低点20.68BP，显著高于同期限城投AAA（0.8% / 0.27BP）与中短票AAA（2.8% / 5.82BP）。建议在信用组合中明确超配至核心底仓地位（<span class="data">目标权重不低于30%</span>），止盈位设在再压缩8BP附近。AA+ 5Y可作为下沉增强，小仓位（≤10%）参与。</p>
-      <p class="strategy-item"><span class="strategy-num">2. </span><span class="alert">严格规避：中短票AAA 1Y & 城投AAA全曲线。</span>中短票AAA 1Y今日已刷新2025年以来新低（近1年分位0.4%）、城投AAA全曲线分位数均<2.5%，继续持仓等同于在绝对价值极值位接盘，进一步压缩空间几乎为零而估值回调风险显著累积。仓位建议：<span class="alert">中短票AAA 1Y仅保留到期前流动性管理用途、不新增；城投AAA 5Y清仓，仅保留1-3Y票息持有</span>。</p>
-      <p class="strategy-item"><span class="strategy-num">3. </span><span class="head">规避长端利率债追涨：等待配置盘回归再参与。</span>10Y国债活跃券已逼近1.75%关口，但中债估值曲线显示配置盘未跟进——交易盘单边博弈的格局下长端赔率快速下降。策略上不主动追长端，<span class="head">等待下一轮资金面或政策利好信号出现、或活跃券与中债估值利差重新走阔后再考虑介入</span>。</p>
-      <p class="strategy-item"><span class="strategy-num">4. </span><span class="head">整体仓位：中久期防御+二永主导。</span>组合结构建议——<span class="data">3-5Y二永AAA-占比30-40%（核心底仓）+ 1-3Y城投AAA占比20-25%（票息）+ 1-3Y中短票AAA占比10-15%（流动性垫）+ 5Y二级资本债AA+占比≤10%（下沉增强）+ 现金与短融≥10%（税期缓冲）</span>。本周重点关注政治局会议政策信号，若出现超预期宽松信号则考虑向长端适度延伸久期。</p>
+    <div class="footer">
+      <p>信用日报：20260420 · 买方信用策略视角 · 仅供内部参考</p>
     </div>
-    <div class="source">数据来源：《信用债净值曲线-全品种》中债估值日频数据库——中短票AAA(M1000532/M1000534/M1000536)、城投AAA(M1000381/M1000383/M1000385)、银行二级资本债AAA-(M1010704/M1010706/M1010708)、银行二级资本债AA+(M1010719/M1010721/M1010723)、国债(M1000158/M1000160/M1000162)；信用利差基于同期限中债国债估值自行计算；分位数与2025年以来最低点基于日频工作日序列统计；理财规模数据取自Wind资讯。</div>
-    <div class="chart-wrap">
-      <img src="assets/20260420_chart2_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
-      <p class="chart-caption">图2　信用债全品种近1年分位数 & 距2025年以来低点压缩空间（一图看完今日信用机会）</p>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>信用日报：20260420 · 买方信用策略视角 · 仅供内部参考</p>
   </div>
 </div>
 

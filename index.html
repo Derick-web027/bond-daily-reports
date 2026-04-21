@@ -3,125 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>固收日报 | Bond Daily Reports</title>
+<title>信用日报 | Credit Daily Reports</title>
 <style>
-  :root {
-    --clr-data: #1F4E79;
-    --clr-alert: #C00000;
-    --clr-head: #262626;
-    --clr-mute: #7F7F7F;
-    --clr-bg: #fafafa;
-    --clr-card: #ffffff;
-    --clr-border: #e5e5e5;
-    --clr-accent: #1F4E79;
+  :root{
+    --clr-orange:#D97706;
+    --clr-orange-deep:#B45309;
+    --clr-orange-soft:#FFF4E0;
+    --clr-gray-bg:#F7F6F4;
+    --clr-gray-card:#FFFFFF;
+    --clr-gray-border:#E5E0D9;
+    --clr-gray-text:#3A3632;
+    --clr-gray-sub:#6B635A;
+    --clr-gray-mute:#9A928A;
   }
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: var(--clr-bg);
-    color: #333;
-    margin: 0;
-    padding: 32px 16px;
+  *{box-sizing:border-box}
+  body{
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--clr-gray-bg);
+    color:var(--clr-gray-text);
+    margin:0;
+    padding:32px 16px;
+    line-height:1.6;
   }
-  .container {
-    max-width: 820px;
-    margin: 0 auto;
+  .container{max-width:860px;margin:0 auto}
+  .header{
+    background:linear-gradient(135deg,var(--clr-orange) 0%,var(--clr-orange-deep) 100%);
+    color:#fff;
+    padding:38px 32px 30px;
+    border-radius:12px;
+    margin-bottom:22px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(139,90,20,0.12);
   }
-  .header {
-    text-align: center;
-    padding: 32px 24px;
-    background: white;
-    border: 1px solid var(--clr-border);
-    border-radius: 8px;
-    margin-bottom: 24px;
+  .header h1{font-size:30px;margin:0 0 6px 0;font-weight:700;letter-spacing:2px}
+  .header .sub{font-size:14px;color:#FFECCF;margin:6px 0 14px;font-weight:500}
+  .stats{display:flex;justify-content:center;gap:32px;margin-top:14px;font-size:13px;color:#FFECCF}
+  .stats span strong{color:#fff;font-size:18px;font-weight:700;margin-right:4px}
+  .report-list{
+    background:var(--clr-gray-card);
+    border:1px solid var(--clr-gray-border);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 6px rgba(139,90,20,0.05);
   }
-  .header h1 {
-    font-size: 28px;
-    color: var(--clr-head);
-    margin: 0 0 8px 0;
+  .report-item{
+    display:flex;
+    align-items:center;
+    padding:20px 26px;
+    border-bottom:1px solid var(--clr-gray-border);
+    text-decoration:none;
+    color:inherit;
+    transition:all 0.15s;
   }
-  .header p {
-    color: var(--clr-mute);
-    font-size: 14px;
-    margin: 4px 0;
+  .report-item:hover{background:var(--clr-orange-soft)}
+  .report-item:last-child{border-bottom:none}
+  .report-date{
+    font-size:13px;
+    color:var(--clr-gray-sub);
+    margin-right:22px;
+    min-width:108px;
+    font-family:"SF Mono",Monaco,Consolas,monospace;
+    font-weight:500;
   }
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 16px;
-    font-size: 13px;
-    color: var(--clr-mute);
+  .report-title{
+    flex:1;
+    font-size:15px;
+    color:var(--clr-gray-text);
+    font-weight:500;
+    line-height:1.5;
   }
-  .stats span strong {
-    color: var(--clr-data);
-    font-size: 16px;
+  .report-arrow{
+    color:var(--clr-orange);
+    font-size:18px;
+    font-weight:700;
+    margin-left:10px;
   }
-  .report-list {
-    background: white;
-    border: 1px solid var(--clr-border);
-    border-radius: 8px;
-    overflow: hidden;
+  .footer{
+    text-align:center;
+    margin-top:28px;
+    color:var(--clr-gray-mute);
+    font-size:12.5px;
   }
-  .report-item {
-    display: flex;
-    align-items: center;
-    padding: 18px 24px;
-    border-bottom: 1px solid var(--clr-border);
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.15s;
-  }
-  .report-item:hover {
-    background: #f5f8fc;
-  }
-  .report-item:last-child {
-    border-bottom: none;
-  }
-  .report-date {
-    font-size: 14px;
-    color: var(--clr-mute);
-    margin-right: 20px;
-    min-width: 100px;
-    font-family: "SF Mono", Monaco, Consolas, monospace;
-  }
-  .report-title {
-    flex: 1;
-    font-size: 15px;
-    color: var(--clr-head);
-    font-weight: 500;
-  }
-  .report-arrow {
-    color: var(--clr-mute);
-    font-size: 14px;
-  }
-  .footer {
-    text-align: center;
-    margin-top: 32px;
-    color: var(--clr-mute);
-    font-size: 13px;
-  }
-  .footer a {
-    color: var(--clr-data);
-    text-decoration: none;
-  }
-  @media (max-width: 640px) {
-    body { padding: 16px 8px; }
-    .header { padding: 24px 16px; }
-    .header h1 { font-size: 22px; }
-    .report-item { padding: 14px 16px; flex-wrap: wrap; }
-    .report-date { min-width: 100%; margin-bottom: 4px; }
+  .footer a{color:var(--clr-orange-deep);text-decoration:none;font-weight:500}
+  .footer a:hover{text-decoration:underline}
+  @media(max-width:640px){
+    body{padding:16px 10px}
+    .header{padding:26px 18px;border-radius:8px}
+    .header h1{font-size:23px;letter-spacing:1px}
+    .header .sub{font-size:12.5px}
+    .stats{gap:20px;font-size:12px}
+    .stats span strong{font-size:16px}
+    .report-item{padding:15px 18px;flex-wrap:wrap}
+    .report-date{min-width:100%;margin-bottom:4px;font-size:12px}
+    .report-title{font-size:14px}
   }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1>📊 固收市场日报</h1>
-    <p>Bond Daily Reports · 买方信用策略视角</p>
+    <h1>📊 信用日报</h1>
+    <div class="sub">Credit Daily Reports · 买方信用策略视角 · 保险资管</div>
     <div class="stats">
-      <span><strong id="count">-</strong> 期</span>
-      <span>最新: <strong id="latest">-</strong></span>
+      <span><strong id="count">-</strong>期</span>
+      <span>最新 <strong id="latest">-</strong></span>
     </div>
   </div>
 
@@ -135,11 +120,11 @@
 </div>
 
 <script>
-// 日报清单（新增日报时手动在这里追加一条）
+// 日报清单（新增日报时手动在这里追加一条，按日期倒序）
 const reports = [
   {
     date: "2026-04-20",
-    title: "中短票AAA短端破新低，信用利差全面压缩",
+    title: "中短票AAA破新低，二级资本债5Y仍是相对价值洼地",
     file: "reports/20260420.html"
   },
   {
@@ -154,7 +139,6 @@ const reports = [
   }
 ];
 
-// 按日期倒序排列
 reports.sort((a, b) => b.date.localeCompare(a.date));
 
 const list = document.getElementById("report-list");
