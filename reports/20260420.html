@@ -37,7 +37,13 @@
   .mode-toggle button.active{background:var(--clr-orange);color:#fff;border-color:var(--clr-orange)}
 
   /* 结论卡片（最前） */
-  .concl-card{background:var(--clr-orange-soft);border-left:5px solid var(--clr-orange);border-radius:4px;padding:18px 22px;margin:8px 0 22px}
+  .concl-card{background:var(--clr-orange-soft);border-left:5px solid var(--clr-orange);border-radius:4px;padding:18px 22px;margin:8px 0 14px}
+  .sellside-ref-card{background:#F2F0EC;border-left:4px solid #9A928A;border-radius:3px;padding:14px 18px;margin:0 0 22px;font-size:12.5px;color:var(--clr-gray-sub);line-height:1.6}
+  .sellside-ref-card .sr-title{font-size:12px;font-weight:700;color:#6B635A;letter-spacing:1px;margin-bottom:6px;font-style:italic}
+  .sellside-ref-card .sr-meta{font-size:11.5px;color:#8C857D;margin-bottom:8px}
+  .sellside-ref-card .sr-row{margin:4px 0;text-indent:0}
+  .sellside-ref-card .sr-label{font-weight:700;color:var(--clr-gray-text);margin-right:4px}
+  .sellside-ref-card .sr-our{color:var(--clr-good);font-weight:700;margin-right:4px}
   .concl-card-title{font-size:13px;font-weight:700;color:var(--clr-orange-deep);letter-spacing:3px;margin-bottom:10px;text-transform:uppercase}
   .concl-regime{font-size:15px;line-height:1.6;margin:0 0 12px;text-indent:0}
   .concl-regime .tag-regime{display:inline-block;background:var(--clr-orange);color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:700;margin-right:8px}
@@ -111,25 +117,31 @@
       <button onclick="showMode('detail',this)">详细版</button>
     </div>
 
-    <!-- ============== 结论卡片（精简版/详细版共用） ============== -->
+    <!-- ============== 结论卡片：纯本行结论 ============== -->
     <div class="concl-card">
-      <div class="concl-card-title">◆ 核心判断 ◆</div>
-      <div style="background:#FFF9ED;border-left:3px solid var(--clr-orange);border-radius:3px;padding:8px 12px;margin-bottom:10px;font-size:13px;line-height:1.55;text-indent:0;color:var(--clr-gray-sub)">
-        <strong style="color:var(--clr-orange-deep)">📍 本周卖方主线</strong>（6家周报4/13-19）：<strong>【共识】"类资产荒"压平利差→超长信用补涨为核心</strong>；4-5Y二永骑乘+7Y凸点+超长信用是主要机会；1Y短端赔率不足需规避。<strong>【分歧】</strong>广发激进推30Y信用补涨（目标10Y国债1.75%/30Y 2.23%）、申万观察派（超长换手率尚不明显）、天风提示5Y二永仅剩2.5BP空间。
-      </div>
+      <div class="concl-card-title">◆ 本行核心判断 ◆</div>
       <p class="concl-regime">
         <span class="tag-regime">市场定性</span>
-        <strong style="color:var(--clr-orange-deep)">长期震荡市 + 牛平末期 + 超长信用行情延续</strong>——A股放量反弹压制债市情绪，但长端信用仍具结构α，<span class="alert">短端贴底、长端为王，机构正向久期要收益</span><span class="good">（⭐ 本行长端信用核心观点与6家卖方共识完全吻合）</span>。
+        <strong style="color:var(--clr-orange-deep)">长期震荡市 + 牛平末期 + 超长信用行情延续</strong>——A股放量反弹压制债市情绪，但长端信用仍具结构α，<span class="alert">短端贴底、长端为王，机构正向久期要收益</span>。
       </p>
       <ul class="concl-list">
-        <li><span class="tag tag-good">✅ 超长信用</span>首选：<strong>城投AAA 20/30Y</strong>（分位41-46%/距低点37.83-39.88BP）+ <strong>二级AAA- 10Y</strong>（-1.75BP领跌、分位31.5%/距低点30.35BP）+ <strong>二级AA+ 10Y</strong>（分位31.1%/距低点28.24BP）；合计权重15-25%</li>
+        <li><span class="tag tag-good">✅ 超长信用</span>首选：<strong>城投AAA 20/30Y</strong>（分位41-46%/距低点37.83-39.88BP）+ <strong>二级AAA- 10Y</strong>（-1.75BP领跌、分位31.5%/距低点30.35BP）+ <strong>二级AA+ 10Y</strong>（分位31.1%/距低点28.24BP）；合计权重15-25%（30Y权重≤10%、逢回调分批）</li>
         <li><span class="tag tag-good">✅ 中段品种</span>5Y二级AAA-（分位24.3%/距低点20.68BP）+ 5Y二级AA+（分位13.9%/距低点15.10BP），合计25-30%</li>
         <li><span class="tag tag-bad">❌ 规避</span>中短票AAA 1Y（破25年新低、分位0.4%）、城投AAA 1-5Y（分位<2.5%、距低点<1BP）——<strong>贴底接盘</strong></li>
         <li><span class="tag tag-bad">❌ 不追</span>长端利率债活跃券——活跃券与中债估值分化、配置盘未跟进，<strong>牛平末期赔率低</strong></li>
       </ul>
       <div class="concl-flip">
-        <strong>翻转信号：</strong>①10Y国债1.75%/30Y 2.23%关口（卖方共识/央行合意区间约束） &nbsp;|&nbsp; ②R-DR利差>15BP→去杠杆 &nbsp;|&nbsp; ③理财赎回压力超预期（申万提示重点尾部风险） &nbsp;|&nbsp; ④基金久期接近3年→超长信用止盈 &nbsp;|&nbsp; ⑤10Y AAA中短票-3Y利差压至25-30BP→安全垫极薄
+        <strong>翻转信号：</strong>①10Y国债1.75%/30Y 2.23%关口 &nbsp;|&nbsp; ②R-DR利差>15BP→去杠杆 &nbsp;|&nbsp; ③理财赎回压力超预期 &nbsp;|&nbsp; ④基金久期接近3年→超长信用止盈 &nbsp;|&nbsp; ⑤10Y AAA中短票-3Y利差压至25-30BP→安全垫极薄
       </div>
+    </div>
+
+    <!-- ============== 卖方参考卡：独立·灰色·明确标识参考性质 ============== -->
+    <div class="sellside-ref-card">
+      <div class="sr-title">📖 上周卖方周报参考 &nbsp;·&nbsp; 非本行结论，仅作思路对照</div>
+      <div class="sr-meta">覆盖：华创 / 华西 / 天风 / 广发 / 申万 / 长江宏观 共 6 家 &nbsp;·&nbsp; 周报时段 2026-04-13 至 04-19</div>
+      <div class="sr-row"><span class="sr-label">【共识】</span>"类资产荒"压平利差→超长信用补涨为核心；4-5Y二永骑乘+7Y凸点+超长信用是主要机会；1Y短端赔率不足需规避；保险上周净买入超长信用181亿（7-10Y 157亿）。</div>
+      <div class="sr-row"><span class="sr-label">【分歧】</span>广发激进推30Y信用补涨（设10Y国债1.75%/30Y 2.23%目标位）；华西/华创中性，推AA+中短票10Y+7Y凸点；天风/申万保守，提示5Y二永仅剩2.5BP空间、超长换手率尚不明显。</div>
+      <div class="sr-row"><span class="sr-our">⭐ 本行对照：</span>长端信用方向与6家共识吻合；但比广发激进派更谨慎——30Y权重≤10%+逢回调分批，不追激进仓位。</div>
     </div>
 
     <!-- ============== 精简版 ============== -->
@@ -195,13 +207,6 @@
       <div class="chart-wrap">
         <img src="assets/20260420_chart2_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
         <p class="chart-caption">图2　信用债全品种近1年分位数 & 距2025年以来低点压缩空间</p>
-      </div>
-
-      <div class="portfolio-box" style="background:#FFF4E0;border:1px solid #F3D199">
-        <p style="margin:0 0 8px;text-indent:0"><strong style="color:var(--clr-orange-deep)">📍 本周卖方主线参考</strong>（梳理上周4/13-19共6家：华创/华西/天风/广发/申万/长江宏观）</p>
-        <p style="margin:0 0 6px;text-indent:0"><span class="good">【6家共识·⭐高度吻合本行】</span>"类资产荒"压平利差→<strong>超长信用债补涨为本周核心机会</strong>；4-5Y二永骑乘+7Y凸点+超长信用是主要配置方向；1Y短端赔率不足需规避；保险资金上周净买入超长信用181亿（其中7-10Y 157亿，华西数据）。</p>
-        <p style="margin:0 0 6px;text-indent:0"><strong>【分歧】</strong><span class="data">激进派·广发</span>：推荐30Y信用补涨，10Y国债目标1.75%/30Y 2.23% &nbsp;&nbsp;|&nbsp;&nbsp; <span class="data">中性派·华西/华创</span>：推AA+中短票10Y（拥挤度低/2.38%）+7Y凸点 &nbsp;&nbsp;|&nbsp;&nbsp; <span class="data">保守派·天风/申万</span>：5Y二永仅剩2.5BP空间/超长换手率尚不明显。</p>
-        <p style="margin:0;text-indent:0"><span class="good">【本行差异化观点·⭐】</span>基于xlsx中债估值独立验证，支持超长方向看多、<strong>但不追激进仓位（30Y权重≤10%）、以"逢回调倒金字塔增配"为主</strong>——比广发激进观点更强调分批买入而非单点突进。保险机构已入场（同业净买入验证），本行可随同业节奏适度跟进。</p>
       </div>
 
       <h2>四、策略矩阵与仓位建议</h2>
