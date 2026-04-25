@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信用日报：20260424 - 长端调整向5-7Y蔓延，城投AAA 30Y连续两日独立抗跌</title>
+<style>
+  :root{
+    --clr-orange:#D97706;
+    --clr-orange-deep:#B45309;
+    --clr-orange-soft:#FFF4E0;
+    --clr-orange-bar:#F59E0B;
+    --clr-gray-bg:#F7F6F4;
+    --clr-gray-card:#FFFFFF;
+    --clr-gray-border:#E5E0D9;
+    --clr-gray-text:#3A3632;
+    --clr-gray-sub:#6B635A;
+    --clr-gray-mute:#9A928A;
+    --clr-data:#1F4E79;
+    --clr-alert:#C00000;
+    --clr-good:#2E7D32;
+  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","等线",sans-serif;background:var(--clr-gray-bg);color:var(--clr-gray-text);margin:0;padding:24px 12px;line-height:1.7}
+  .container{max-width:860px;margin:0 auto;background:var(--clr-gray-card);padding:0;border:1px solid var(--clr-gray-border);border-radius:10px;box-shadow:0 2px 8px rgba(139,90,20,0.06);overflow:hidden}
+  .header-band{background:linear-gradient(135deg,var(--clr-orange) 0%,var(--clr-orange-deep) 100%);color:#fff;padding:28px 44px 22px}
+  .header-band h1{font-size:26px;margin:0;font-weight:700;letter-spacing:1px}
+  .header-band .subtitle{font-size:15px;margin-top:8px;font-weight:500;opacity:0.96;letter-spacing:0.3px}
+  .header-band .nav-back{color:#FFEDD2;text-decoration:none;font-size:13px;display:inline-block;margin-bottom:12px}
+  .header-band .nav-back:hover{text-decoration:underline;color:#fff}
+  .content{padding:24px 44px 36px}
+  .mode-toggle{text-align:right;margin-bottom:14px;border-bottom:1px solid var(--clr-gray-border);padding-bottom:10px}
+  .mode-toggle button{font-size:13px;padding:6px 16px;border:1px solid var(--clr-gray-border);background:#fff;border-radius:20px;cursor:pointer;margin-left:6px;color:var(--clr-gray-sub);transition:all .15s}
+  .mode-toggle button:hover{border-color:var(--clr-orange)}
+  .mode-toggle button.active{background:var(--clr-orange);color:#fff;border-color:var(--clr-orange)}
+  .concl-card{background:var(--clr-orange-soft);border-left:5px solid var(--clr-orange);border-radius:4px;padding:18px 22px;margin:8px 0 14px}
+  .sellside-ref-card{background:#F2F0EC;border-left:4px solid #9A928A;border-radius:3px;padding:14px 18px;margin:0 0 22px;font-size:12.5px;color:var(--clr-gray-sub);line-height:1.6}
+  .sellside-ref-card .sr-title{font-size:12px;font-weight:700;color:#6B635A;letter-spacing:1px;margin-bottom:6px;font-style:italic}
+  .sellside-ref-card .sr-meta{font-size:11.5px;color:#8C857D;margin-bottom:8px}
+  .sellside-ref-card .sr-row{margin:4px 0;text-indent:0}
+  .sellside-ref-card .sr-label{font-weight:700;color:var(--clr-gray-text);margin-right:4px}
+  .sellside-ref-card .sr-our{color:var(--clr-good);font-weight:700;margin-right:4px}
+  .concl-card-title{font-size:13px;font-weight:700;color:var(--clr-orange-deep);letter-spacing:3px;margin-bottom:10px;text-transform:uppercase}
+  .concl-regime{font-size:15px;line-height:1.6;margin:0 0 12px;text-indent:0}
+  .concl-regime .tag-regime{display:inline-block;background:var(--clr-orange);color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:700;margin-right:8px}
+  .concl-list{list-style:none;padding:0;margin:0}
+  .concl-list li{padding:6px 0;border-top:1px dashed #E9D9B8;font-size:14px;line-height:1.6;text-indent:0}
+  .concl-list li:first-child{border-top:none}
+  .concl-list .tag{display:inline-block;font-weight:700;padding:1px 9px;border-radius:10px;font-size:12px;margin-right:8px;min-width:54px;text-align:center}
+  .tag-good{background:#D1EAD2;color:var(--clr-good)}
+  .tag-bad{background:#F8D7DA;color:var(--clr-alert)}
+  .tag-warn{background:#FFE3B8;color:var(--clr-orange-deep)}
+  .concl-flip{margin-top:10px;padding-top:10px;border-top:1px dashed #E9D9B8;font-size:12.5px;line-height:1.6;color:var(--clr-gray-sub);text-indent:0}
+  .concl-flip > strong{color:var(--clr-orange-deep);font-size:13px;display:block;margin-bottom:6px}
+  .flip-list{list-style:none;padding:0;margin:0}
+  .flip-list li{display:flex;align-items:flex-start;padding:5px 0;border-top:1px dotted #EADFC4;line-height:1.55}
+  .flip-list li:first-child{border-top:none}
+  .flip-cond{flex:0 0 40%;font-weight:700;color:var(--clr-alert);padding-right:10px;font-size:12.5px}
+  .flip-arrow{flex:0 0 18px;color:var(--clr-gray-text);font-weight:700;text-align:center}
+  .flip-act{flex:1;color:var(--clr-gray-sub);font-size:12.5px;padding-left:8px}
+  .flip-act strong{color:var(--clr-gray-text);font-weight:700}
+  @media(max-width:640px){.flip-list li{flex-direction:column}.flip-cond{flex:auto;margin-bottom:2px}.flip-arrow{display:none}.flip-act{padding-left:12px}}
+  h2{font-size:17px;color:var(--clr-orange-deep);border-left:4px solid var(--clr-orange);padding-left:12px;margin:26px 0 12px 0;font-weight:700}
+  p{margin:10px 0;text-indent:2em;font-size:14.5px;color:var(--clr-gray-text);line-height:1.75}
+  p.no-indent{text-indent:0}
+  .data{color:var(--clr-data);font-weight:600}
+  .alert{color:var(--clr-alert);font-weight:600}
+  .good{color:var(--clr-good);font-weight:600}
+  .head{color:var(--clr-gray-text);font-weight:600}
+  .source{font-size:12px;font-style:italic;color:var(--clr-gray-mute);border-left:3px solid var(--clr-gray-border);padding:6px 10px;margin:4px 0 16px 0;text-indent:0;background:#FAFAF8;border-radius:0 4px 4px 0;line-height:1.55}
+  .chart-wrap{margin:18px -4px;text-align:center}
+  .chart-wrap img{max-width:100%;height:auto;border:1px solid var(--clr-gray-border);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+  .chart-caption{font-size:12px;color:var(--clr-gray-mute);font-style:italic;margin-top:6px;text-indent:0}
+  .strategy-matrix{margin:10px 0;border:1px solid var(--clr-gray-border);border-radius:6px;overflow:hidden}
+  .strategy-matrix .row{display:flex;padding:10px 14px;border-bottom:1px solid var(--clr-gray-border);font-size:13.5px;line-height:1.55;align-items:flex-start}
+  .strategy-matrix .row:last-child{border-bottom:none}
+  .strategy-matrix .row:nth-child(odd){background:#FAFAF8}
+  .strategy-matrix .col-tag{width:170px;font-weight:700;flex-shrink:0}
+  .strategy-matrix .col-tag.good{color:var(--clr-good)}
+  .strategy-matrix .col-tag.warn{color:var(--clr-orange-deep)}
+  .strategy-matrix .col-tag.bad{color:var(--clr-alert)}
+  .strategy-matrix .col-body{flex:1;color:var(--clr-gray-text)}
+  .portfolio-box{background:#FFF9ED;border:1px solid #F3E1B8;border-radius:6px;padding:12px 16px;margin:14px 0;font-size:13.5px;line-height:1.65;text-indent:0}
+  .portfolio-box strong{color:var(--clr-orange-deep)}
+  .hidden{display:none}
+  .footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--clr-gray-border);font-size:12px;color:var(--clr-gray-mute);text-align:center}
+  @media(max-width:640px){body{padding:10px 4px}.container{border-radius:6px}.header-band{padding:20px 20px 16px}.header-band h1{font-size:21px}.header-band .subtitle{font-size:13px}.content{padding:16px 18px 22px}.concl-card{padding:14px 14px;margin-bottom:16px}h2{font-size:15.5px}p{font-size:14px;text-indent:1.5em}.strategy-matrix .row{flex-direction:column;padding:10px 12px}.strategy-matrix .col-tag{width:auto;margin-bottom:4px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header-band">
+    <a href="../" class="nav-back">← 返回日报列表</a>
+    <h1>信用日报：20260424</h1>
+    <div class="subtitle">长端调整向5-7Y蔓延，城投AAA 30Y连续两日独立抗跌（保险盘承接）</div>
+  </div>
+
+  <div class="content">
+    <div class="mode-toggle">
+      <button class="active" onclick="showMode('brief',this)">精简版</button>
+      <button onclick="showMode('detail',this)">详细版</button>
+    </div>
+
+    <!-- 结论卡 -->
+    <div class="concl-card">
+      <div class="concl-card-title">◆ 本行核心判断 ◆</div>
+      <p class="concl-regime">
+        <span class="tag-regime">市场定性</span>
+        <strong style="color:var(--clr-orange-deep)">震荡市 + 长端调整向中段蔓延 + 城投30Y独立抗跌印证保险盘配置</strong>——长端调整范围从昨日"7Y以上"扩展到今日"5Y以上"：1-3Y国债继续下行0.5-1.5BP、5Y拐点持平、7Y起+1.25-2.10BP明显承压；30Y国债活跃券回到2.2685%（距2.23%上方3.85BP）/中债估值2.2472%（距2.23%上方1.72BP）；30Y-10Y国债期限利差走阔至48.71BP；但<span class="good">城投AAA 30Y连续两日逆势下行（4/23 -0.54BP、4/24 -2.31BP）、独立抗跌印证保险/年金配置盘承接</span>。
+      </p>
+      <ul class="concl-list">
+        <li><span class="tag tag-good">✅ 长端城投（提至15-20%）</span><strong>城投AAA 30Y</strong>（连续2日下行、今日-2.31BP、分位40.1%/距低点37.0BP）+ <strong>城投AAA 20Y</strong>（-0.85BP、分位39.2%/距低点36.2BP）；保险盘连续承接信号确认；本日30Y-10Y城投利差进一步收窄至32.20BP（较昨日-2.28BP）；<strong>核心底仓提至15-20%</strong>、利率调整窗口分批加配</li>
+        <li><span class="tag tag-warn">⚠️ 7Y凸点（暂不新增）</span>中短票AAA 7Y（+0.56BP、分位16.3%）+ 城投AAA 7Y（+0.56BP、分位10.9%）——较二级AAA- 7Y（+1.73BP）抗跌但已转上行；维持5-10%、暂不新增</li>
+        <li><span class="tag tag-warn">⚠️ 5Y中段（持续承压、暂停加仓）</span>5Y二级AAA-（+1.77BP、分位30.0%）+ 5Y二级AA+（+1.76BP）+ 5Y永续AAA-（+1.40BP）——本周二日累计上行3-4BP、调整尚未到位；维持20-25%、待5Y二级AAA-分位回35%+再加配</li>
+        <li><span class="tag tag-bad">❌ 规避短端贴底</span>中短票AAA/AA+ 1Y、城投AAA 1Y、二级AAA-/AA+ 1Y、中短票AA+ 1Y——10个品种全部贴/破25年新低；1Y AAA存单1.445%持平——严禁新增、仅到期滚续</li>
+        <li><span class="tag tag-bad">❌ 长端利率债（继续止盈）</span>10Y国债活跃券1.7525%（距1.75%上方0.25BP）、30Y活跃券2.2685%（距2.23%上方3.85BP）；连续两日确认阻力位；<strong>30Y国债分位升至68.4%、距70%+加仓信号还差约5BP收益率上行</strong>；继续维持减至底仓下限</li>
+      </ul>
+      <div class="concl-flip">
+        <strong>翻转信号·五段式实测：</strong>
+
+        <ul class="flip-list">
+          <li><span class="flip-cond">① 30Y国债跌破2.23% <span style="color:#6B635A">○ 已反转回阈值上方</span>：活跃券2.2685%（上方3.85BP）、中债估值2.2472%（上方1.72BP）</span><span class="flip-arrow">→</span><span class="flip-act">连续两日确认阻力位，<strong>长端利率债继续止盈、不参与超跌反弹</strong></span></li>
+          <li><span class="flip-cond">② 10Y国债跌破1.75% <span style="color:#6B635A">○ 已反转回阈值上方</span>：活跃券1.7525%（上方0.25BP）、中债估值1.7601%（上方1.01BP）</span><span class="flip-arrow">→</span><span class="flip-act">1.75%阻力位确认，<strong>长端利率债减仓至底仓下限保留</strong></span></li>
+          <li><span class="flip-cond">③ R-DR007利差走阔至>15BP <span style="color:#6B635A">○ 未触发</span>：当前4.45BP（较昨日-1.86BP收窄）、距阈值10.55BP</span><span class="flip-arrow">→</span><span class="flip-act">跨周末分层进一步收敛（6.31→4.45），<strong>维持110-115%杠杆</strong></span></li>
+          <li><span class="flip-cond">④ 10Y中短票AAA-3Y利差收窄至≤25BP <span style="color:#6B635A">○ 未触发</span>：当前45.52BP（较昨日+1.79BP）、距阈值20.52BP</span><span class="flip-arrow">→</span><span class="flip-act">中长-中端价差耗尽，<strong>止盈10Y中短票、转配5-7Y二永</strong></span></li>
+          <li><span class="flip-cond">⑤ 30Y-10Y城投AAA利差收窄至≤15BP <span style="color:#6B635A">○ 未触发</span>：当前32.20BP（较昨日-2.28BP连续收窄）、距阈值17.20BP</span><span class="flip-arrow">→</span><span class="flip-act">城投30Y独立抗跌→长端城投相对价值显现，<strong>暂保留长端城投核心底仓</strong></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 卖方参考卡 -->
+    <div class="sellside-ref-card">
+      <div class="sr-title">📖 上周卖方周报参考 &nbsp;·&nbsp; 非本行结论，仅作思路对照</div>
+      <div class="sr-meta">覆盖：华创固收 / 华西固收 / 天风固收 / 广发固收 / 申万固收 共 5 家 &nbsp;·&nbsp; 周报时段 2026-04-13 至 04-19</div>
+      <div class="sr-row"><span class="sr-label">【共识】</span>"类资产荒"压平利差→超长信用补涨为核心；4-5Y二永骑乘+7Y凸点+超长信用是主要机会；1Y短端赔率不足需规避。</div>
+      <div class="sr-row"><span class="sr-label">【分歧】</span>激进派推30Y信用补涨（设10Y国债1.75%/30Y 2.23%目标位）；中性派推AA+中短票10Y+7Y凸点；保守派提示5Y二永仅剩2.5BP空间、超长换手率尚不明显。</div>
+      <div class="sr-row"><span class="sr-our">⭐ 本行对照：</span>1.75%/2.23%阈值4/22跌破→4/23-4/24连续两日反转回阈值上方，本周时间序列完整验证了"止盈先于行情退潮"。本周新增信号：城投AAA 30Y连续两日独立抗跌（-0.54+-2.31BP）、保险盘配置已开始接力——<strong>长端城投核心底仓权重可由10-15%提至15-20%</strong>，但仍不在调整窗口集中加仓。</div>
+    </div>
+
+    <!-- 精简版 -->
+    <div id="brief">
+      <h2>资金面</h2>
+      <p>央行50亿7天逆回购净投放45亿（利率1.40%）。Wind EDB实测：<span class="data">DR001 1.2188%（+0.17BP）、DR007 1.3257%（+0.19BP）、R001 1.2911%（+0.09BP）、R007 1.3702%（-1.67BP）</span>；<span class="data">DR007继续低于OMO 7.43BP</span>；<span class="good">R-DR007利差进一步收窄至4.45BP（较昨日-1.86BP）</span>——R007单日下行1.67BP是核心驱动，跨月前融资压力明显缓解。X-repo盘面银行隔夜1.2%、非银1.36-1.38%；7天资金可跨月、仍在1.4%以下低位。1Y AAA存单1.445%持平、3M 1.355%持平。下周一公布MLF续做规模。</p>
+
+      <h2>利率债</h2>
+      <p>调整向5-7Y蔓延、长端1.75%/2.23%阻力位连续两日确认：<span class="data">30Y国债活跃券+2.10BP报2.2685%（距2.23%上方3.85BP）、10Y+0.75BP报1.7525%（距1.75%上方0.25BP）、7Y+1.25BP；中债估值30Y 2.2472%（分位68.4%）、20Y +2.75BP最大调整段、10Y 1.7601%</span>；1-3Y仍下行（1Y国债-0.50BP/2Y-1.57BP/3Y-1.47BP）。<span class="alert">30Y-10Y国债期限利差走阔至48.71BP（30Y分位升至68.4%、距70%+加仓信号还差约5BP收益率上行）</span>——下阶段30Y国债至2.27%+触发真实加仓信号。</p>
+      <div class="chart-wrap">
+        <img src="assets/20260424_chart1_rates_divergence.png" alt="利率债曲线分化">
+        <p class="chart-caption">图1　调整向5-7Y蔓延：1-3Y仍下行、5Y拐点、7-30Y承压（2026-04-24 BP变动）</p>
+      </div>
+
+      <h2>信用债（核心）</h2>
+      <p>三段分化清晰：<span class="good">🎯 城投AAA 30Y连续2日独立下行（4/23 -0.54BP+今日-2.31BP）、保险盘承接信号已确认；30Y-10Y城投AAA利差进一步收窄至32.20BP（较昨日-2.28BP）</span>。中段调整继续：<span class="alert">二级AAA- 7Y +1.73BP/10Y +2.49BP/5Y +1.77BP；二级AA+ 10Y +2.49BP；中短票AAA 7Y/10Y/5Y分别+0.56/+1.50/+0.77BP相对抗跌</span>。<span class="alert">短端坚挺（10个品种贴/破25年新低）严禁新增</span>。</p>
+      <div class="chart-wrap">
+        <img src="assets/20260424_chart2_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
+        <p class="chart-caption">图2　信用债全品种近1年分位数 & 距2025年以来低点压缩空间</p>
+      </div>
+
+      <h2>策略矩阵</h2>
+      <div class="strategy-matrix">
+        <div class="row"><span class="col-tag good">✅ 长端城投（提至15-20%）</span><span class="col-body">城投AAA 30Y（连续2日下行、分位40.1%）+ 20Y（分位39.2%）；保险盘承接信号确认；核心底仓提至15-20%、利率调整窗口分批加配</span></div>
+        <div class="row"><span class="col-tag good">✅ 杠杆</span><span class="col-body">维持110-115%（DR007低于OMO 7.43BP、R-DR007进一步收窄至4.45BP）；下周一关注MLF续做规模</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 7Y凸点（暂不新增）</span><span class="col-body">中短票AAA 7Y/城投AAA 7Y——较二级AAA- 7Y抗跌但已转上行；维持5-10%、暂不新增</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 5Y中段（持续承压暂停加仓）</span><span class="col-body">5Y二级AAA-/AA+/永续 本周累计上行3-4BP；维持20-25%、待5Y二级AAA-分位回35%+再加</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 二级AAA- 10Y（底仓下限）</span><span class="col-body">今日+2.49BP继续调整、本周累计调整+5.13BP后净小幅上行；分位34.3%；维持核心底仓下限5-8%</span></div>
+        <div class="row"><span class="col-tag bad">❌ 规避短端贴底</span><span class="col-body">中短票AAA/AA+ 1Y、中短票AA+ 5Y、城投AAA 1Y、二级AAA-/AA+ 1Y——10个品种贴/破25年新低；严禁新增</span></div>
+        <div class="row"><span class="col-tag bad">❌ 长端利率债（继续止盈）</span><span class="col-body">连续两日确认1.75%/2.23%阻力位；30Y分位升至68.4%、距70%+加仓信号还差约5BP收益率上行；继续维持减至底仓下限</span></div>
+        <div class="row"><span class="col-tag bad">❌ 波段</span><span class="col-body">MLF续做+政治局会议事件临近、波段风险不对称、不作主策略</span></div>
+      </div>
+
+      <div class="portfolio-box">
+        <strong>组合结构：</strong> 长端城投（20/30Y AAA） 15-20%（提至上限、保险盘承接信号确认）+ 7Y凸点 5-10%（暂不新增）+ 5Y二级AAA-/AA+/永续 20-25%（暂停加仓）+ 1-3Y城投AAA 10-15%（不新增）+ 二级AAA- 10Y 5-8%（底仓下限）+ 现金10-15%（MLF+政治局会议前留出）；杠杆110-115%。
+      </div>
+    </div>
+
+    <!-- 详细版 -->
+    <div id="detail" class="hidden">
+      <h2>一、公开市场与资金面</h2>
+      <p>央行今日开展<span class="data">50亿元7天逆回购</span>（利率1.40%），当日5亿到期、<span class="head">净投放45亿</span>。临近月末资金面继续宽松——Wind EDB实测：<span class="data">DR001 1.2188%（+0.17BP）、DR007 1.3257%（+0.19BP）、R001 1.2911%（+0.09BP）、R007 1.3702%（-1.67BP）</span>；<span class="alert">DR007继续低于7天OMO（1.40%）7.43BP</span>，连续多日宽松格局延续。R-DR001利差7.23BP、<span class="good">R-DR007利差4.45BP（较昨日-1.86BP收窄）</span>——R007单日下行1.67BP是核心驱动，<span class="good">跨月前融资压力明显缓解、分层进一步收敛</span>。X-repo盘面银行隔夜1.2%延续充足供给、非银机构质押隔夜1.36-1.38%；<span class="data">7天资金可跨月、仍在1.4%以下低位</span>——临近月末但充足流动性下银行间回购成交量反创历史高点附近。存单方面1Y AAA同业存单1.445%持平、3M AAA 1.355%持平。</p>
+      <p>一级市场——<span class="data">财政部1Y/20Y/30Y国债加权中标1.06%/2.20%/2.20%，全场倍数2.29/3.73/3.58</span>；财政部债务管理司明确今年超长期特别国债计划1.3万亿，发行节奏与去年基本一致、4月份启动、10月份完成；<span class="data">30Y国债二级中债估值今日报2.2472%、20Y国债+2.75BP（最大调整段）、20Y分位升至51.8%、30Y分位升至68.4%</span>——20-30Y分位本周上行接近合理中枢。下周一公布MLF续做规模——市场预期续作规模与到期量基本匹配、影响相对中性。</p>
+      <div class="source">数据来源：R001/R007/DR001/DR007/NCD取自Wind EDB API（M0041652/M0041653/M1006336/M1006337/M1010885/M1010882）2026-04-24收盘；Wind债市综述（央行公开市场操作、X-repo盘面报价、一级市场投标数据）。</div>
+
+      <h2>二、利率债与债市总览</h2>
+      <p>今日利率债呈现<span class="alert">"调整向5-7Y蔓延"的演进结构</span>——昨日的"7Y以上承压"今天扩展到了"5Y以上"。活跃券端：<span class="data">30Y国债"26附息国债02" +2.10BP报2.2685%、10Y国债"26附息国债05" +0.75BP报1.7525%、10Y国开"25国开20" +1.40BP报1.8760%、7Y国债+1.25BP、5Y国债持平+0.25BP</span>；中债估值曲线口径：<span class="data">30Y国债+1.19BP报2.2472%、20Y国债+2.75BP报2.1853%（最大调整段）、10Y国债+0.53BP报1.7601%、7Y+1.32BP</span>；同时<span class="head">1-3Y仍下行：1Y国债-0.50BP/2Y-1.57BP/3Y-1.47BP，国开1Y-1.00BP</span>——曲线呈现"前端坚挺、5Y拐点、7-30Y承压"的明确分化。</p>
+      <p><span class="head">关键阻力位连续两日确认：</span><span class="alert">10Y国债活跃券1.7525%（距1.75%上方0.25BP）/中债估值1.7601%（距1.75%上方1.01BP）；30Y国债活跃券2.2685%（距2.23%上方3.85BP）/中债估值2.2472%（距2.23%上方1.72BP）</span>——4/22跌破→4/23反转→4/24继续在阈值上方运行，<span class="alert">1.75%/2.23%作为央行合意区间边界已被市场充分接受</span>。国债期货配合调整——30Y主连-0.50%报113.280元（午后跳水）、10Y主连-0.04%报108.720元；曲线形态上，<span class="data">国债30Y-10Y期限利差进一步走阔至48.71BP（较昨日+0.66BP）</span>——30Y分位升至68.4%、20Y分位51.8%、长端分位继续上行进入合理中枢。</p>
+      <p><span class="head">核心判断：</span><span class="alert">本周时间序列完整验证了"止盈先于行情退潮"——4/22跌破→4/23反转→4/24继续承压、调整向中段蔓延</span>。今日新增结构性信号——<span class="data">30Y国债分位升至68.4%、距70%+加仓信号还差约5BP收益率上行（即30Y国债中债估值上行至2.27%+）</span>。从赔率角度，短端1-5Y仍贴底（分位<1%）、不再下行；7-30Y承压但分位仍中等（30%-68%）、调整尚未到位；<span class="good">本周本行的减仓节奏完全踩对、未踩追高接盘、可在下阶段关注30Y国债到2.27%+/分位70%+的真实加仓信号</span>。下周关注4/27/28 MLF续做、4/30 政治局会议两个事件节点。</p>
+      <div class="source">数据来源：活跃券收盘=DM查债通 2026-04-24；中债估值=中债估值-日度xlsx；期限利差/分位数基于xlsx自行计算；CFFEX国债期货、一级市场投标数据取自Wind综述。</div>
+      <div class="chart-wrap">
+        <img src="assets/20260424_chart1_rates_divergence.png" alt="利率债曲线分化">
+        <p class="chart-caption">图1　调整向5-7Y蔓延：1-3Y仍下行、5Y拐点、7-30Y承压（2026-04-24 BP变动）</p>
+      </div>
+
+      <h2>三、信用债市场</h2>
+      <p>信用债今日呈现<span class="alert">"短端坚挺+中段承压+长端城投独立抗跌"的三段分化</span>，城投AAA长端是本日最大亮点。</p>
+      <p><span class="head" style="color:var(--clr-good)">【长端城投：连续两日独立抗跌】</span>今日<span class="good">城投AAA 30Y -2.31BP报2.5151%（昨日-0.54BP，本周累计-2.85BP）、20Y -0.85BP报2.4422%、5Y+1.90BP</span>——城投长端在利率债持续上行的环境下连续两日下行，<span class="good">独立抗跌信号清晰、印证保险/年金配置盘已开始系统性承接</span>。30Y-10Y城投AAA利差进一步收窄至32.20BP（较昨日-2.28BP）；本日30Y城投AAA分位40.1%、距2025低点37.0BP——分位中等、距低点仍有空间。<span class="good">本行长端城投核心底仓权重可从10-15%提至15-20%、利率债调整窗口择机分批加配</span>。</p>
+      <p><span class="head">【银行二永：调整继续】</span><span class="alert">二级AAA- 7Y +1.73BP报2.1412%、10Y +2.49BP报2.2451%、5Y+1.77BP报1.9906%</span>；二级AA+ 10Y +2.49BP/5Y +1.76BP/3Y +0.37BP；永续AAA- 5Y +1.40BP、3Y +0.57BP。本周二级AAA- 10Y累计调整+5.13BP（4/23 +2.64、4/24 +2.49），结合4/21-4/22累计-4.48BP，本周净小幅上行约+0.65BP。活跃个券"26工行二级资本债01BC"、"26中行二级资本债01BC"、"26民生银行二级资本债01"收益率上行均在2BP左右。</p>
+      <p><span class="head">【中短票AAA：相对抗跌但已转上行】</span><span class="head">7Y +0.56BP报2.0191%、10Y +1.50BP报2.1663%、5Y+0.77BP</span>——较二级AAA- 7Y/10Y仍抗跌但已开始上行；<span class="head">中短票AAA 5Y距低点仅6.44BP、分位5.2%——已接近"压缩极值"位置、暂不新增</span>。</p>
+      <p><span class="head">【短端坚挺】</span>与中长端调整对比鲜明——<span class="alert">中短票AAA 1Y -0.35BP报1.5025%（连续3日新低）、中短票AA+ 1Y -0.35BP、城投AAA 1Y -0.75BP、二级AAA- 1Y -0.59BP</span>——10个短端品种全部贴/破2025低点。但短端是配置禁区、严禁新增。</p>
+      <p><span class="head">【保险视角】</span><span class="good">30Y-10Y国债期限利差进一步走阔至48.71BP（较昨日+0.66BP、远高于25BP增配阈值）</span>——本日30Y国债中债估值升至2.2472%、分位68.4%已进入合理中枢。<span class="good">今日30Y城投AAA-2.31BP+昨日-0.54BP连续独立下行、是保险盘已开始承接的硬证据</span>——本行作为保险资管，可在30Y国债到2.27%+（分位70%+）真实加仓信号触发时分批加配，本日先小幅加配长端城投（因其相对独立、不受利率长端调整冲击）。</p>
+      <p><span class="head">【xlsx实测止盈信号检查】</span>①10Y中短票AAA-3Y利差<span class="data">今日45.52BP（较昨日+1.79BP），距25BP阈值20.52BP、未触发</span>；②30Y-10Y城投AAA利差<span class="data">今日32.20BP（较昨日-2.28BP连续收窄）、距15BP阈值17.20BP、未触发</span>——信用端两条止盈信号均未触发；但<span class="good">30Y-10Y城投利差已从4/22的34.85BP连续两日收窄至32.20BP，城投长端独立抗跌正在压平期限利差</span>。</p>
+      <div class="source">数据来源：《中债估值曲线-日度-信用债净值曲线-全品种》xlsx（全品种到期收益率sheet）；期限利差、近1年分位数、距2025低点BP均基于xlsx自行计算；分位数窗口2025-04-24至2026-04-24（工作日样本）；2025年低点指2025-01-01至今最低值。</div>
+      <div class="chart-wrap">
+        <img src="assets/20260424_chart2_credit_quantile.png" alt="信用债全品种分位数与压缩空间">
+        <p class="chart-caption">图2　信用债全品种近1年分位数 & 距2025年以来低点压缩空间</p>
+      </div>
+
+      <h2>四、策略矩阵与仓位建议</h2>
+      <div class="strategy-matrix">
+        <div class="row"><span class="col-tag good">✅ 长端城投（提至15-20%底仓）</span><span class="col-body">城投AAA 30Y（连续2日下行、今日-2.31BP、分位40.1%/距低点37.0BP）+ 20Y（-0.85BP、分位39.2%/距低点36.2BP）；保险盘承接信号确认；核心底仓提至15-20%、利率调整窗口分批加配。</span></div>
+        <div class="row"><span class="col-tag good">✅ 杠杆</span><span class="col-body">维持110-115%（DR007低于OMO 7.43BP、R-DR007进一步收窄至4.45BP、跨月前分层收敛）；下周一关注MLF续做规模。</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 7Y凸点（暂不新增）</span><span class="col-body">中短票AAA 7Y（+0.56BP、分位16.3%）+ 城投AAA 7Y（+0.56BP、分位10.9%）；调整已蔓延至5-7Y，维持5-10%、暂不新增。</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 5Y中段（持续承压暂停加仓）</span><span class="col-body">5Y二级AAA-（+1.77BP、分位30.0%/距低点22.5BP）+ 5Y二级AA+（+1.76BP）+ 5Y永续AAA-（+1.40BP）——本周累计上行3-4BP；维持20-25%、待5Y二级AAA-分位回35%+再加。</span></div>
+        <div class="row"><span class="col-tag warn">⚠️ 二级AAA- 10Y（底仓下限保留）</span><span class="col-body">今日+2.49BP继续调整、本周累计调整+5.13BP后净小幅上行；分位34.3%；维持核心底仓下限5-8%。</span></div>
+        <div class="row"><span class="col-tag bad">❌ 规避短端贴底</span><span class="col-body">中短票AAA/AA+ 1Y、中短票AA+ 5Y、城投AAA 1Y、二级AAA-/AA+ 1Y——10个品种贴/破25年新低；1Y AAA存单1.445%持平——严禁新增。</span></div>
+        <div class="row"><span class="col-tag bad">❌ 长端利率债（继续止盈）</span><span class="col-body">10Y国债中债估值1.7601%（距1.75%上方1.01BP）、30Y 2.2472%（距2.23%上方1.72BP）；连续两日确认阻力位；30Y分位升至68.4%、距70%+加仓信号还差约5BP收益率上行——继续维持减仓至底仓下限、不参与超跌反弹。</span></div>
+        <div class="row"><span class="col-tag bad">❌ 波段</span><span class="col-body">MLF续做+政治局会议事件临近、波段风险不对称、不作主策略。</span></div>
+      </div>
+
+      <div class="portfolio-box">
+        <strong>组合结构：</strong> 长端城投（20/30Y AAA） 15-20%（提至上限、保险盘承接信号确认）+ 7Y凸点 5-10%（暂不新增）+ 5Y二级AAA-/AA+/永续 20-25%（暂停加仓）+ 1-3Y城投AAA 10-15%（不新增）+ 二级AAA- 10Y 5-8%（底仓下限）+ 现金10-15%（MLF+政治局会议前留出）；杠杆率110-115%。
+      </div>
+
+      <div class="source">本文结论基于2026-04-24当日市场数据独立判断，数据口径统一采用中债估值+DM活跃券+Wind EDB；所有BP差值由Python程序计算（非手工心算）。</div>
+    </div>
+
+    <div class="footer">
+      <p>信用日报：20260424 · 买方信用策略视角 · 仅供内部参考</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function showMode(mode, btn){
+  document.getElementById('brief').classList.toggle('hidden', mode !== 'brief');
+  document.getElementById('detail').classList.toggle('hidden', mode !== 'detail');
+  document.querySelectorAll('.mode-toggle button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
