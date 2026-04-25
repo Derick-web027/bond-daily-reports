@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>固收周报 W2026-17 (4/20-4/24) | 长端关键位反转确认 + 城投30Y独立抗跌</title>
+<style>
+:root{--clr-orange:#D97706;--clr-orange-deep:#B45309;--clr-orange-soft:#FFF4E0;--clr-gray-bg:#F7F6F4;--clr-gray-card:#FFFFFF;--clr-gray-border:#E5E0D9;--clr-gray-text:#3A3632;--clr-gray-sub:#6B635A;--clr-gray-mute:#9A928A;--clr-data:#1F4E79;--clr-alert:#C00000;--clr-good:#2E7D32;--clr-blue:#1F4E79;}
+*{box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--clr-gray-bg);color:var(--clr-gray-text);margin:0;padding:24px 12px;line-height:1.7}
+.container{max-width:920px;margin:0 auto;background:var(--clr-gray-card);padding:0;border:1px solid var(--clr-gray-border);border-radius:10px;box-shadow:0 2px 8px rgba(139,90,20,0.06);overflow:hidden}
+.header-band{background:linear-gradient(135deg,#1F4E79 0%,#0F2E4D 100%);color:#fff;padding:30px 44px 24px}
+.header-band h1{font-size:28px;margin:0;font-weight:700;letter-spacing:1px}
+.header-band .week-tag{display:inline-block;background:#F59E0B;color:#fff;padding:3px 14px;border-radius:14px;font-size:13px;font-weight:700;margin-bottom:8px}
+.header-band .subtitle{font-size:15px;margin-top:8px;font-weight:500;opacity:0.96}
+.header-band .nav-back{color:#A8C5E2;text-decoration:none;font-size:13px;display:inline-block;margin-bottom:12px}
+.content{padding:24px 44px 36px}
+.section-title{font-size:20px;color:var(--clr-orange-deep);border-bottom:3px solid var(--clr-orange);padding-bottom:8px;margin:30px 0 18px;font-weight:700;letter-spacing:1px}
+.section-title .num{display:inline-block;width:30px;height:30px;line-height:30px;text-align:center;background:var(--clr-orange);color:#fff;border-radius:50%;font-size:15px;margin-right:10px;vertical-align:middle}
+h3{font-size:15.5px;color:var(--clr-blue);margin:18px 0 10px;font-weight:700;border-left:4px solid var(--clr-blue);padding-left:10px}
+.regime-card{background:var(--clr-orange-soft);border-left:5px solid var(--clr-orange);border-radius:4px;padding:18px 22px;margin:8px 0 18px;font-size:15px;line-height:1.7}
+.regime-card .tag-regime{display:inline-block;background:var(--clr-orange);color:#fff;padding:2px 12px;border-radius:14px;font-size:12px;font-weight:700;margin-right:8px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 14px}
+table th{background:#F5F1EA;color:var(--clr-gray-text);font-weight:700;padding:8px 10px;border:1px solid var(--clr-gray-border);text-align:center}
+table td{padding:7px 10px;border:1px solid var(--clr-gray-border);text-align:center;color:var(--clr-gray-text)}
+table tr:nth-child(odd) td{background:#FAFAF8}
+table td.label{text-align:left;font-weight:600;color:var(--clr-gray-text)}
+table td.up{color:var(--clr-alert);font-weight:700}
+table td.dn{color:var(--clr-good);font-weight:700}
+table td.flat{color:var(--clr-gray-mute)}
+table td.weekbp{font-weight:700;background:#FFF4E0;border-left:2px solid var(--clr-orange)}
+.data{color:var(--clr-data);font-weight:600}
+.alert{color:var(--clr-alert);font-weight:600}
+.good{color:var(--clr-good);font-weight:600}
+.head{color:var(--clr-gray-text);font-weight:700}
+p{margin:10px 0;text-indent:2em;font-size:14.5px;line-height:1.75}
+p.no-indent{text-indent:0}
+.chart-wrap{margin:18px -8px;text-align:center}
+.chart-wrap img{max-width:100%;height:auto;border:1px solid var(--clr-gray-border);border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+.chart-caption{font-size:12px;color:var(--clr-gray-mute);font-style:italic;margin-top:6px;text-indent:0}
+.timeline{border-left:3px solid var(--clr-orange);padding-left:18px;margin:14px 0 14px 6px}
+.timeline-item{margin-bottom:14px;position:relative}
+.timeline-item:before{content:'';position:absolute;left:-26px;top:6px;width:12px;height:12px;background:var(--clr-orange);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--clr-orange)}
+.timeline-date{font-weight:700;color:var(--clr-orange-deep);font-size:14px;margin-bottom:4px}
+.timeline-text{font-size:13.5px;color:var(--clr-gray-text);line-height:1.65}
+.scorecard{margin:8px 0 14px;border:1px solid var(--clr-gray-border);border-radius:6px;overflow:hidden}
+.scorecard .row{display:flex;padding:11px 14px;border-bottom:1px solid var(--clr-gray-border);font-size:13.5px;line-height:1.6}
+.scorecard .row:last-child{border-bottom:none}
+.scorecard .row:nth-child(odd){background:#FAFAF8}
+.scorecard .col-view{flex:0 0 24%;font-weight:700;color:var(--clr-gray-text);padding-right:10px}
+.scorecard .col-init{flex:0 0 24%;color:var(--clr-gray-sub);padding:0 10px;border-left:1px dashed var(--clr-gray-border);font-size:13px}
+.scorecard .col-real{flex:0 0 28%;color:var(--clr-gray-text);padding:0 10px;border-left:1px dashed var(--clr-gray-border);font-size:13px}
+.scorecard .col-score{flex:0 0 24%;font-weight:700;padding-left:10px;border-left:1px dashed var(--clr-gray-border);font-size:13px}
+.score-good{color:var(--clr-good)}
+.score-mid{color:var(--clr-orange-deep)}
+.score-bad{color:var(--clr-alert)}
+.next-week{background:#E8F4F8;border-left:5px solid var(--clr-blue);border-radius:4px;padding:16px 20px;margin:14px 0;font-size:14px;line-height:1.7}
+.next-week h3{color:var(--clr-blue);border-left:none;padding-left:0;margin-top:0}
+.source{font-size:12px;font-style:italic;color:var(--clr-gray-mute);border-left:3px solid var(--clr-gray-border);padding:6px 10px;margin:4px 0 16px 0;text-indent:0;background:#FAFAF8;border-radius:0 4px 4px 0;line-height:1.55}
+.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--clr-gray-border);font-size:12px;color:var(--clr-gray-mute);text-align:center}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header-band">
+    <a href="../" class="nav-back">← 返回首页</a>
+    <span class="week-tag">周报 W2026-17</span>
+    <h1>固收周报 · 2026年4月第4周</h1>
+    <div class="subtitle">2026-04-20 至 2026-04-24 · 长端关键位反转确认 + 城投30Y连续两日独立抗跌（保险盘配置）</div>
+  </div>
+
+  <div class="content">
+
+    <!-- ==================== 总览卡 ==================== -->
+    <div class="regime-card">
+      <span class="tag-regime">本周市场定性</span>
+      <strong style="color:var(--clr-orange-deep)">"V型震荡 + 关键位确认 + 配置盘信号显现"三段式格局</strong>——周一周二长端利率延续上周补涨势头加速下行、<span class="alert">4/22 30Y/10Y 国债活跃券集体跌破 1.75%/2.23% 关键位</span>；4/23 单日反转、长端利率上行+1.6-2.2BP，关键位被止盈盘集中收复至阈值上方；4/24 调整范围从 7Y 扩展到 5Y、二级AAA- 7Y/10Y 单日+1.7BP承压、<span class="good">但城投 AAA 30Y 连续两日逆势下行（4/23 -0.54BP、4/24 -2.31BP，本周累计 -4.84BP）</span>——保险/年金配置盘在长端调整窗口的承接信号被反复印证。本周累计：30Y 国债中债估值 -0.28BP（活跃券 +2.85BP）、10Y 国债中债估值 -0.22BP；城投 30Y 是全市场最强品种（-4.84BP）；DR007 周内最低 4/22 的 1.3202%、最终收 1.3257%。
+    </div>
+
+    <!-- ==================== A 段·周度复盘 ==================== -->
+    <h2 class="section-title"><span class="num">A</span>周度复盘卡</h2>
+
+    <h3>① 资金面（5天 + 周累计）</h3>
+    <table><thead><tr><th>指标</th><th>04-20</th><th>04-21</th><th>04-22</th><th>04-23</th><th>04-24</th><th>周累计BP<br>(4/24 vs 4/20)</th></tr></thead><tbody><tr><td class="label">DR001 (%)</td><td>1.2167</td><td>1.2170</td><td>1.2181</td><td>1.2171</td><td>1.2188</td><td class="weekbp up">+0.21</td></tr><tr><td class="label">DR007 (%)</td><td>1.3358</td><td>1.3271</td><td>1.3202</td><td>1.3238</td><td>1.3257</td><td class="weekbp dn">-1.01</td></tr><tr><td class="label">R001 (%)</td><td>1.2858</td><td>1.2853</td><td>1.2891</td><td>1.2902</td><td>1.2911</td><td class="weekbp up">+0.53</td></tr><tr><td class="label">R007 (%)</td><td>1.3910</td><td>1.3945</td><td>1.3921</td><td>1.3869</td><td>1.3702</td><td class="weekbp dn">-2.08</td></tr><tr><td class="label">NCD 1Y (%)</td><td>1.4675</td><td>1.4500</td><td>1.4400</td><td>1.4450</td><td>1.4450</td><td class="weekbp dn">-2.25</td></tr><tr><td class="label">NCD 3M (%)</td><td>1.3750</td><td>1.3700</td><td>1.3550</td><td>1.3550</td><td>1.3550</td><td class="weekbp dn">-2.00</td></tr><tr><td class="label">DR007 低于 OMO（BP）</td><td class="up">+6.42</td><td class="up">+7.29</td><td class="up">+7.98</td><td class="up">+7.62</td><td class="up">+7.43</td><td class="weekbp dn">-1.01</td></tr><tr><td class="label">R-DR007 利差（BP）</td><td>+5.52</td><td>+6.74</td><td>+7.19</td><td>+6.31</td><td>+4.45</td><td class="weekbp dn">-1.07</td></tr></tbody></table>
+    <p class="no-indent" style="font-size:13px;color:var(--clr-gray-sub)">
+      关键观察：DR007 全周维持 1.32-1.34% 区间、低于 OMO 6.4-8.0BP（4/22 最宽 7.98BP）；R-DR007 利差从周初 5.52BP 走阔到 4/22 的 7.19BP 再收敛到周五 4.45BP——<strong>跨周末分层加剧后快速收敛、未触发翻转信号 ③（&gt;15BP 阈值）</strong>。NCD 1Y 创历史新低 1.44%（4/22）后微幅回调至 1.4450%、3M 1.355% 持平——存单极值定价短端贴底面。
+    </p>
+
+    <h3>② 利率债（中债估值 + 活跃券口径）</h3>
+    <table><thead><tr><th>品种</th><th>4/17 (%)</th><th>4/24 (%)</th><th>周累计 BP</th></tr></thead><tbody><tr><td class="label">国债 1Y</td><td>116.1300</td><td>114.3800</td><td class="weekbp dn">-1.75</td></tr><tr><td class="label">国债 3Y</td><td>132.5000</td><td>127.7900</td><td class="weekbp dn">-4.71</td></tr><tr><td class="label">国债 5Y</td><td>149.9500</td><td>147.9900</td><td class="weekbp dn">-1.96</td></tr><tr><td class="label">国债 7Y</td><td>162.9000</td><td>163.1100</td><td class="weekbp up">+0.21</td></tr><tr><td class="label">国债 10Y</td><td>176.2300</td><td>176.0100</td><td class="weekbp dn">-0.22</td></tr><tr><td class="label">国债 20Y</td><td>219.0300</td><td>218.5300</td><td class="weekbp dn">-0.50</td></tr><tr><td class="label">国债 30Y</td><td>225.0000</td><td>224.7200</td><td class="weekbp dn">-0.28</td></tr><tr><td class="label">国开 1Y</td><td>139.9100</td><td>136.9100</td><td class="weekbp dn">-3.00</td></tr><tr><td class="label">国开 3Y</td><td>154.8200</td><td>154.5800</td><td class="weekbp dn">-0.24</td></tr><tr><td class="label">国开 5Y</td><td>164.0000</td><td>164.5900</td><td class="weekbp up">+0.59</td></tr><tr><td class="label">国开 7Y</td><td>177.2500</td><td>179.4500</td><td class="weekbp up">+2.20</td></tr><tr><td class="label">国开 10Y</td><td>184.0800</td><td>186.3900</td><td class="weekbp up">+2.31</td></tr><tr><td class="label">国开 30Y</td><td>238.1000</td><td>237.8300</td><td class="weekbp dn">-0.27</td></tr><tr><td class="label">活跃券 国债 10Y</td><td>176.0000</td><td>175.2500</td><td class="weekbp dn">-0.75</td></tr><tr><td class="label">活跃券 国债 30Y</td><td>224.0000</td><td>226.8500</td><td class="weekbp up">+2.85</td></tr><tr><td class="label">活跃券 国开 10Y</td><td>187.4500</td><td>187.6000</td><td class="weekbp up">+0.15</td></tr><tr><td class="label">活跃券 国开 30Y</td><td>211.0000</td><td>210.5000</td><td class="weekbp dn">-0.50</td></tr></tbody></table>
+    <p class="no-indent" style="font-size:13px;color:var(--clr-gray-sub)">
+      <strong>曲线形态本周变化</strong>：国债 30Y-10Y 期限利差从 48.77BP 走阔到 48.71BP（-0.06BP）、10Y-1Y 利差从 60.10BP 变到 61.63BP（+1.53BP）——典型<strong>牛陡格局</strong>（短端继续下行、长端上行）。<strong>口径分化值得关注</strong>：30Y 国债活跃券周累计 +2.85BP 显著弱于中债估值 -0.28BP——交易盘止盈幅度大于配置盘定价、若下周配置盘继续承接、活跃券或回补；国开 7-10Y 上行 +2.2/+2.3BP 显著弱于国债同期限（隐含税率走阔、国开凸性溢价被压缩后修复）。
+    </p>
+
+    <h3>③ 信用债（核心17品种）</h3>
+    <table><thead><tr><th>品种</th><th>4/17 (%)</th><th>4/24 (%)</th><th>周累计 BP</th></tr></thead><tbody><tr><td class="label">中短票AAA 1Y</td><td>154.1800</td><td>150.2500</td><td class="weekbp dn">-3.93</td></tr><tr><td class="label">中短票AAA 5Y</td><td>184.8700</td><td>185.7800</td><td class="weekbp up">+0.91</td></tr><tr><td class="label">中短票AAA 7Y</td><td>204.4500</td><td>201.9100</td><td class="weekbp dn">-2.54</td></tr><tr><td class="label">中短票AAA 10Y</td><td>217.6100</td><td>216.6300</td><td class="weekbp dn">-0.98</td></tr><tr><td class="label">城投AAA 1Y</td><td>155.4700</td><td>152.1800</td><td class="weekbp dn">-3.29</td></tr><tr><td class="label">城投AAA 5Y</td><td>186.1100</td><td>185.5000</td><td class="weekbp dn">-0.61</td></tr><tr><td class="label">城投AAA 7Y</td><td>201.4000</td><td>199.8100</td><td class="weekbp dn">-1.59</td></tr><tr><td class="label">城投AAA 10Y</td><td>219.6400</td><td>219.3100</td><td class="weekbp dn">-0.33</td></tr><tr><td class="label">城投AAA 15Y</td><td>231.9600</td><td>232.0200</td><td class="weekbp flat">+0.06</td></tr><tr><td class="label">城投AAA 20Y</td><td>245.6900</td><td>244.2200</td><td class="weekbp dn">-1.47</td></tr><tr><td class="label"><strong style="color:#C00000">城投AAA 30Y ★</strong></td><td>256.3500</td><td>251.5100</td><td class="weekbp dn">-4.84</td></tr><tr><td class="label">二级AAA- 3Y</td><td>178.2000</td><td>177.9500</td><td class="weekbp dn">-0.25</td></tr><tr><td class="label">二级AAA- 5Y</td><td>197.2400</td><td>199.0600</td><td class="weekbp up">+1.82</td></tr><tr><td class="label">二级AAA- 7Y</td><td>213.0100</td><td>214.1200</td><td class="weekbp up">+1.11</td></tr><tr><td class="label">二级AAA- 10Y</td><td>225.6100</td><td>224.5100</td><td class="weekbp dn">-1.10</td></tr><tr><td class="label">二级AA+ 5Y</td><td>199.7700</td><td>201.0400</td><td class="weekbp up">+1.27</td></tr><tr><td class="label">永续AAA- 5Y</td><td>199.9400</td><td>200.4200</td><td class="weekbp up">+0.48</td></tr></tbody></table>
+    <p class="no-indent" style="font-size:13px;color:var(--clr-gray-sub)">
+      <strong>本周信用债三大特征</strong>：(1) <span class="good">城投 AAA 30Y -4.84BP 全市场最强</span>——保险盘连续两日（4/23-4/24）独立承接、30Y-10Y 城投利差从 36.71BP 收窄到 32.20BP（-4.51BP）；(2) <span class="alert">5Y 二级 AAA- 周累计 +1.82BP、5Y 二级 AA+ +1.27BP、5Y 永续 AAA- +0.48BP</span>——4/23-4/24 集中承压、5Y 二永是本周最弱板块；(3) <span class="alert">短端整周持续贴底</span>——中短票 AAA 1Y -3.93BP/AA+ 1Y -3.93BP/城投 AAA 1Y -3.29BP 集体破新低、新增多个品种触及25年以来低点。
+    </p>
+
+    <h3>④ 周度图表</h3>
+    <div class="chart-wrap">
+      <img src="../reports/assets/W2026-17_chart1_heatmap.png" alt="周度BP变动热力图">
+      <p class="chart-caption">图1·周度 BP 变动热力图（17 个核心品种 × 5 个交易日 + 周累计列）</p>
+    </div>
+    <div class="chart-wrap">
+      <img src="../reports/assets/W2026-17_chart2_weeklybp.png" alt="周累计BP排序">
+      <p class="chart-caption">图2·周累计 BP 排序（绿=下行/涨、红=上行/跌；城投 30Y 全市场最强、二级 AAA- 7Y 和国开 7-10Y 最弱）</p>
+    </div>
+
+    <!-- ==================== 关键事件时间线 ==================== -->
+    <h2 class="section-title"><span class="num">★</span>本周关键事件时间线</h2>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-date">4/20 周一 · 上周共识跟进</div>
+        <div class="timeline-text">5 家卖方周报达成"类资产荒压平利差→超长信用补涨"共识；本行延续上周长端信用思路、底仓 15-25%；保险上周净买入超长信用 181 亿（7-10Y 占 157 亿）；活跃券 10Y -0.55BP/30Y -0.50BP、配置盘观望、交易盘抢长端。</div>
+      </div>
+      <div class="timeline-item"><div class="timeline-date">4/21 周二 · 关键位临近预警</div>
+        <div class="timeline-text">活跃券 10Y 国债 1.7430%、30Y 2.2320%——距 1.75%/2.23% 仅 0.20-1.90BP；本行率先进入"立即止盈窗口"、提前一天减仓兑现；二级 AAA- 10Y -2.32BP 领涨信用；翻转信号 ① 临近。</div>
+      </div>
+      <div class="timeline-item"><div class="timeline-date">4/22 周三 · 关键位全面跌破（V型起点）</div>
+        <div class="timeline-text">30Y 国债活跃券 2.2135%（距 2.23% 下方 1.65BP）、10Y 1.7310%（距 1.75% 下方 1.90BP）——<strong>1.75%/2.23% 两大关键位首次集体跌破</strong>；DR007 低 OMO 7.98BP 创周内最宽；NCD 1Y 1.44% 创历史新低；二级 AAA- 10Y 累计-4.48BP 连2日领涨。</div>
+      </div>
+      <div class="timeline-item"><div class="timeline-date">4/23 周四 · 单日反转 + V 型确认</div>
+        <div class="timeline-text">30Y 国债中债估值 +2.16BP 反转回 2.2353%（阈值上方 0.53BP）、10Y +1.59BP 回 1.7548%（上方 0.48BP）——<strong>关键位被止盈盘集中收复、阻力位确认</strong>；二级 AAA- 7Y +3.27BP 单日最大调整；城投 AAA 30Y 逆势 -0.54BP——保险盘信号<strong>第一次显现</strong>。</div>
+      </div>
+      <div class="timeline-item"><div class="timeline-date">4/24 周五 · 调整向中段蔓延 + 配置盘信号确认</div>
+        <div class="timeline-text">长端调整范围从 7Y 扩展到 5Y：5Y 二级 AAA- +1.41BP、5Y 二级 AA+ +1.76BP；30Y 国债活跃券 2.2685%（距 2.23% 上方 3.85BP）；<strong>城投 AAA 30Y 连续第 2 日独立下行 -2.31BP</strong>、30Y-10Y 城投利差收至 32.20BP——保险盘配置信号<strong>反复确认</strong>。</div>
+      </div>
+    </div>
+
+    <!-- ==================== B 段·命中率自评 ==================== -->
+    <h2 class="section-title"><span class="num">B</span>命中率自评卡</h2>
+
+    <div class="scorecard">
+      <div class="row" style="background:#F5F1EA;font-weight:700">
+        <div class="col-view">本行观点</div><div class="col-init">周初判断 (4/20-4/21)</div><div class="col-real">周末实际 (4/24)</div><div class="col-score">命中评级</div>
+      </div>
+      <div class="row">
+        <div class="col-view">长端利率债止盈节奏</div>
+        <div class="col-init">4/21 关键位临近即切换"立即止盈窗口"、不追长端；与上周还在推 30Y 信用补涨的卖方共识对撞</div>
+        <div class="col-real">4/22 关键位跌破→4/23 反转 +1.6-2.2BP→4/24 30Y 距 2.23% 上方 3.85BP——本行 4/21 切止盈、领先市场 2 天</div>
+        <div class="col-score score-good">🟢 完美命中（节奏领先）</div>
+      </div>
+      <div class="row">
+        <div class="col-view">长端信用方向</div>
+        <div class="col-init">看多、底仓 15-25%（4/20）；4/21 调整为"加仓节奏减半"、4/22 切到"暂停新增"；4/24 又提"30Y 城投至 15-20%"</div>
+        <div class="col-real">本周累计：城投 AAA 30Y -4.84BP（全市场最强）、20Y -1.47BP；二级 AAA- 10Y -1.10BP——长端城投确实抗跌，但加仓节奏可以再早 1 天</div>
+        <div class="col-score score-mid">🟡 方向命中、但 4/22 暂停后没及时切"加仓城投30Y"</div>
+      </div>
+      <div class="row">
+        <div class="col-view">5Y 二永空间预警</div>
+        <div class="col-init">卖方说仅剩 2.5BP 空间、本行 4/20 起加仓节奏减半；4/22 后切"暂停加仓 5Y 中段"</div>
+        <div class="col-real">5Y 二级 AAA- 周累计 +1.82BP、5Y 二级 AA+ +1.27BP、5Y 永续 AAA- +0.48BP——4/23-4/24 集中承压</div>
+        <div class="col-score score-good">🟢 风险预判完全命中</div>
+      </div>
+      <div class="row">
+        <div class="col-view">短端规避</div>
+        <div class="col-init">严禁新增中短票/城投 1Y、5Y AA+、二级 AAA- 1Y 等贴底品种</div>
+        <div class="col-real">中短票 AAA 1Y -3.93BP/AA+ 1Y -3.93BP/城投 AAA 1Y -3.29BP 集体破新低、距底部≤1BP——但短端续涨意味着规避成本（错过 -3 BP 的票息+资本利得）</div>
+        <div class="col-score score-mid">🟡 规避方向对、但短端逻辑反常（不该贴底还涨）需重新评估</div>
+      </div>
+      <div class="row">
+        <div class="col-view">杠杆策略</div>
+        <div class="col-init">维持 110-115%（DR007 低 OMO 7BP+ 持续宽松）</div>
+        <div class="col-real">DR007 全周低 OMO 6.4-8.0BP；R-DR007 最宽 7.19BP（4/22）后收敛到 4.45BP；翻转信号 ③ 未触发</div>
+        <div class="col-score score-good">🟢 完全正确</div>
+      </div>
+      <div class="row">
+        <div class="col-view">翻转信号①②（关键位）</div>
+        <div class="col-init">1.75%/2.23% 触及→立即止盈、建仓信号反转</div>
+        <div class="col-real">4/22 触发→本行 4/21 已先切止盈→4/23 反转回阈值上方→4/24 维持上方——节奏完美</div>
+        <div class="col-score score-good">🟢 节奏完美</div>
+      </div>
+    </div>
+
+    <p class="no-indent" style="font-size:14px;margin:14px 0 0">
+      <strong>本周总评：6 项中 4 🟢 + 2 🟡</strong>。最大命中是<strong>关键位止盈节奏</strong>（领先市场 2 天）和<strong>5Y 二永空间预警</strong>。两个 🟡 都指向同一类问题——<strong>过于谨慎、错过加仓窗口</strong>：4/22 关键位跌破后没及时切"加仓城投 30Y"（事后 30Y 4 天累计 -4.84BP）、短端规避虽方向对但 1Y 续涨说明短端的"赔率不足"逻辑在宽松+缺资产环境下不成立。
+    </p>
+
+    <!-- ==================== 下周修正后判断 ==================== -->
+    <div class="next-week">
+      <h3>★ 下周（4/27-4/30 跨5/1）修正后判断</h3>
+      <p class="no-indent">
+        <strong>1. 长端利率债维持止盈、但准备建仓底仓</strong>——30Y 国债活跃券 2.2685%（距 2.23% 上方 3.85BP）、距 70%+ 分位加仓信号还差约 5BP；若下周延续调整、上行至 2.32-2.35% 区间（30Y-10Y 利差走阔到 55BP+）即可逐步建底仓。
+      </p>
+      <p class="no-indent">
+        <strong>2. 城投 AAA 30Y 提至 15-20%（保险盘信号反复确认后加仓）</strong>——本周连续两日独立下行确认配置盘承接、30Y-10Y 城投利差收至 32.20BP；目标位 30Y-10Y 利差≤25BP（再压 7BP）；配合长端利率回调到位时同步加。
+      </p>
+      <p class="no-indent">
+        <strong>3. 5Y 二永等回调到位（5Y 二级 AAA- 上至分位 35%+）再加</strong>——本周累计调整 +1.82BP 但分位仍偏低、不追多；下周如出现单日 +1.5BP 以上调整即触发加仓信号。
+      </p>
+      <p class="no-indent">
+        <strong>4. 修正"短端规避"逻辑</strong>——本周 1Y/3Y 仍小幅下行说明"宽松+缺资产+票息底"的需求面持续。下周观察 4/27 MLF 续做规模：如续做≥6000亿则维持短端流动性垫思路（不主动加但允许到期滚续）；如续做缩量则切到"短端贴底面有反弹风险、严控久期"。
+      </p>
+      <p class="no-indent">
+        <strong>5. 重大事件日历</strong>：<span class="data">4/25 周五</span> 工业企业利润；<span class="data">4/27 周一</span> MLF 6000 亿续做（月内最大事件）；<span class="data">4/30 周三</span> PMI；<span class="data">5/初</span> 政治局会议。
+      </p>
+      <p class="no-indent">
+        <strong>6. 杠杆 110-115% 维持</strong>——DR007 仍低 OMO 7BP+、R-DR007 收敛到 4.45BP，加杠杆窗口保持开放。
+      </p>
+    </div>
+
+    <div class="source">
+      数据来源：资金面 = Wind EDB API（M1006336/M1006337/M0041652/M0041653/M1010885/M1010882）2026-04-20 至 2026-04-24；利率债+信用债中债估值 = 《中债估值曲线-日度》xlsx；活跃券 = DM查债通日终收盘；曲线形态/期限利差/分位数基于 xlsx 自行计算。<br>
+      本周报为 V7.1 标准首次出版、所有 BP 由 Python 程序计算（误差&lt;0.5BP 自检）；HTML 从 0 生成（V6.1）。
+    </div>
+
+    <div class="footer">
+      固收周报 W2026-17 · 2026-04-25 生成 · <a href="../" style="color:var(--clr-gray-mute)">返回首页</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
